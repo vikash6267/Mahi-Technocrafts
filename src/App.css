@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap');
+
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: auto;
+  scrollbar-color: #afb2bf;
+}
+
+li a{
+  width: max-content;
+  position: relative;
+  cursor: pointer;
+}
+li a::after{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  background-color: #272727;
+  transition: 0.3s;
+  transition-timing-function: easy-in-out;
+  transform: scaleX(0)
+}
+ li a:hover::after
+{
+  transform: scaleX(1)
+}
+
+.background{
+  background-color: #afb2bf;
+  background-image: url("./assests/hero-section-2.jpg");
+ background-size: cover;
+}
+.bgimage{
+  height: 300px;
+  width:330px;
+  background-size: cover;
+  background-image: url("./assests/about.jpg");
+  background-attachment: scroll;
+}
+
+.services{
+
+  /* background-image: url("./assests/services.jpeg");
+  background-size: cover; */
+
+  /* background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 6%, rgba(7,14,61,0.9360119047619048) 57%, rgba(0,212,255,1) 89%); */
+background-color: #0093E9;
+background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+
+
+}
+
+.icon {
+  font-size: 42px;
+  width: 120px;
+  height: 120px;
+  padding: 40px 0;
+  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
