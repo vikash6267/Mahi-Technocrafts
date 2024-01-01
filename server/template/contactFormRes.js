@@ -75,7 +75,7 @@ exports.contactUsEmail = (
   <body>
       <div class="container">
           <a href="http://localhost:3000/"><img class="logo"
-                  src="https://i.ibb.co/yR7tspp/logo.png" alt="Mahi TechnoCrats"></a>
+                  src="https://i.ibb.co/x8vZMq7/Mahi-Logo.png" alt="Mahi TechnoCrats"></a>
           <div class="message">Contact Form Confirmation</div>
           <div class="body">
               <p>Dear ${firstname},</p>
