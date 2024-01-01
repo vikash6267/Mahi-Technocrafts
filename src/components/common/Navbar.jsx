@@ -155,8 +155,8 @@ function Navbar() {
         </div>
         <div 
       
-        className="h-24 text-end w-11/12 flex items-center justify-center font-Raleway">
-<pre>©2024 Mahi TechnoCrafts Design by <a href="#top-section" className="text-blue-800 underline">Mahi TechnoCrafts</a> & Team</pre>
+        className="h-24 lg:text-end lg:w-11/12 flex items-center  lg:justify-center font-Raleway text-sm">
+<p >©2024 Mahi TechnoCrafts Design by <a href="#top-section" className="text-blue-800 underline">Mahi TechnoCrafts</a> & Team</p>
 
         </div>
       </div>
