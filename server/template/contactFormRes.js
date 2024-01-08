@@ -74,7 +74,7 @@ exports.contactUsEmail = (
   
   <body>
       <div class="container">
-          <a href="http://localhost:3000/"><img class="logo"
+          <a href="https://mahi-technocrafts.vercel.app/"><img class="logo"
                   src="https://i.ibb.co/x8vZMq7/Mahi-Logo.png" alt="Mahi TechnoCrats"></a>
           <div class="message">Contact Form Confirmation</div>
           <div class="body">
