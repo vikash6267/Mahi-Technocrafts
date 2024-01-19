@@ -11,7 +11,7 @@ function Testimonial() {
                 </p>
         </div>
 
-        <div className='grid lg:grid-cols-3 lg:justify-between justify-center '>
+        <div className='grid lg:grid-cols-4 lg:justify-between justify-center '>
 {
     team.map((pro)=>(
     <div className='pt-16 flex flex-col items-center text-center font-Raleway' key={pro.id}> 

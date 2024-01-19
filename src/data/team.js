@@ -1,6 +1,7 @@
 import vikas from "../assests/team/vikash.jpg"
 import dheeraj from "../assests/team/dheeraj.png"
 import tarun from "../assests/team/tirun.png"
+import samay from "../assests/team/samay.png"
 export const team = [
     {
         id:1,
@@ -26,11 +27,11 @@ export const team = [
 
     },
 
-    // {
-    //     id:4,
-    //     name:"Weather App",
-    //     desc : "Current Weather",
-    //     link : "https://github.com/vikash-maheshwari/weather-web-using-API" ,
-    //     image:weather
-    // },
+    {
+        id:4,
+        name:"Samay Jain",
+        desc : "Full Stack Web Devloper",
+        link : "#" ,
+        image:samay,
+    },
 ]
