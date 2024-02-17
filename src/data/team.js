@@ -6,9 +6,10 @@ export const team = [
     {
         id:1,
         name:"Vikash Maheshwari",
-        desc : "Full Stack Web Devloper",
+        desc : "Full Stack Web Devloper ( Founder )",
         image:vikas,
-        link :"https://www.linkedin.com/in/vikash-maheshwari-1191a9277/"
+        link :"https://www.linkedin.com/in/vikash-maheshwari-1191a9277/",
+    
     },
     {
         id:2,
@@ -27,11 +28,11 @@ export const team = [
 
     },
 
-    {
-        id:4,
-        name:"Samay Jain",
-        desc : "Full Stack Web Devloper",
-        link : "#" ,
-        image:samay,
-    },
+    // {
+    //     id:4,
+    //     name:"Samay Jain",
+    //     desc : "Full Stack Web Devloper",
+    //     link : "#" ,
+    //     image:samay,
+    // },
 ]
