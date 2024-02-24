@@ -1,4 +1,4 @@
-import vikas from "../assests/team/vikash.jpg"
+import vikas from "../assests/team/vk2-removebg-preview.png"
 import dheeraj from "../assests/team/dheeraj.png"
 import tarun from "../assests/team/tirun.png"
 import samay from "../assests/team/samay.png"
