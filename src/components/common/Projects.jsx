@@ -10,19 +10,24 @@ function Projects() {
                     .At the crossroads of innovation and excellence, our web solutions stand as beacons of digital prowess.
                 </p>
         </div>
-        <div className='grid lg:grid-cols-3 lg:justify-between'>
+        <div className='grid lg:grid-cols-3 lg:justify-between gap-5'>
 {
-  projects.map((pro)=>(
-    <div className='pt-16 flex flex-col items-center text-center font-Raleway' key={pro.id}> 
-    <a href={pro.link} title={pro.name}><img 
-    className='h-[150px] hover:scale-110 hover:rotate-6 transition-all'
-    src={pro.image}  alt="" /></a>
+  projects.map((project)=>(
+    <div className="max-w-md mx-auto bg-slate-100 rounded-lg overflow-hidden shadow-xl hover:shadow-lg transition-shadow duration-300 ">
+      <a href={project.link} title={project.name}>
+        <div className="overflow-hidden">
+          <img
+            className="w-full h-56 object-cover object-center transform transition-transform duration-300 hover:scale-110 "
+            src={project.image}
+            alt={project.name}
+          />
+        </div>
+      </a>
 
-    <div className=' pt-3 '>
-      <p className='text text-2xl font-bold'>{pro.name}</p>
-      <p>{pro.desc}</p>
-  
-    </div>
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2 text-amber-950">{project.name}</div>
+        <p className="text-gray-700 text-base">{project.desc}</p>
+      </div>
     </div>
   ))
 }
