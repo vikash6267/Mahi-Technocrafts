@@ -5,6 +5,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { apiConnector } from "../../services/apiConnector"
 import { contactusEndpoint } from "../../services/apis"
 import toast from "react-hot-toast";
+import { IoLogoInstagram } from "react-icons/io5";
 
 function Contact() {
   const [formdata, setFormData] = useState({
@@ -147,6 +148,11 @@ const toasdID = toast.loading("loading")
        <a className=" font-oswald" href="mailto:mahitechnocrats@gmail.com"> mahitechnocrats@gmail.com</a>
         </div>
         
+
+        <div>
+         <p className=" font-Raleway text-2xl from-neutral-600">Follow US</p>
+         <a href="https://www.instagram.com/mahi_technocrafts" className="flex gap-3" target="_blank"><IoLogoInstagram  className="text-2xl text-red-700"/>@mahi_technocrafts</a>
+        </div>
         </div>
       </div>
     </div>
