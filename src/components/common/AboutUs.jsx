@@ -9,7 +9,7 @@ function AboutUs() {
             title :"Custom Crafted Solutions"
         },
         {
-            id:1,
+            id:2,
             title :"Dedicated to Your Growth"
         },   {
             id:3,
@@ -36,7 +36,7 @@ function AboutUs() {
             <div className='bgimage'></div>
 
             {/* content */}
-            <div className='w-[55%]'>
+            <div className='lg:w-[55%] w-[85%]'>
             
           
           

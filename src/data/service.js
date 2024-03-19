@@ -40,7 +40,7 @@ export const service = [
         id:5,
         name:"Graphics Design",
         desc:"Transforming concepts into captivating visuals, our graphic design services blend creativity and strategy to amplify your brand's impact.",
-        image: <FaVrCardboard />
+        image: <FaWandMagicSparkles />
         ,
     },
 
@@ -48,7 +48,7 @@ export const service = [
         id:6,
         name:"Video Editing",
         desc:"Turning raw footage into cinematic brilliance, our video editing services weave storytelling magic. Enhance your visuals and captivate your audience with our expert post-production touch.",
-        image: <FaVrCardboard />
+        image: <FaCirclePlay />
         ,
     },
 

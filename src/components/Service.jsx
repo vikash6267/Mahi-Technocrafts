@@ -14,8 +14,8 @@ function Service() {
 
         <div className="grid lg:grid-cols-3 justify-between w-full ">
           {
-            service.map((ser)=>(
-              <div key={ser.id} className=" flex flex-col items-center gap-2 p-5 text-gray-300 leading-6  font-extralight text-center">
+            service.map((ser,index)=>(
+              <div key={index} className=" flex flex-col items-center gap-2 p-5 text-gray-300 leading-6  font-extralight text-center">
                 <div
                 className="icon flex items-center justify-center"
                 >{ser.image}</div>

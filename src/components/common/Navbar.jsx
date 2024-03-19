@@ -25,8 +25,8 @@ function Navbar() {
 
   return (
     <div className="w-full">
-      <div className="w-full fixed bg-white h-[70px]  border-b-[4px]">
-        <nav className="bg-white border-gray-200 dark:bg-gray-900 lg:w-11/12 mx-auto">
+      <div className="w-full fixed bg-white h-[70px]  border-b-[4px] z-50">
+        <nav className="bg-white border-gray-200 dark:bg-gray-900 lg:w-11/12 mx-auto z-20">
           <div className=" flex flex-wrap items-center justify-between mx-auto p-4">
             <a
               href="#top-section"
@@ -45,7 +45,7 @@ function Navbar() {
             >
               <ul className="font-bold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 {navbar.map((menu, index) => (
-                  <li key={index}>
+                  <li key={menu.id}>
                     <a
                       href={menu.path}
                       className={`scroll px-3 ${
@@ -88,7 +88,7 @@ function Navbar() {
             } w-full`}
           >
             {navbar.map((menu, index) => (
-              <li className="pt-3" key={index}>
+              <li className="pt-3" key={menu.id}>
                 <a
                   href={menu.path}
                   onClick={() => handleLinkClick(menu.path)}

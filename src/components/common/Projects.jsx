@@ -13,11 +13,11 @@ function Projects() {
         <div className='grid lg:grid-cols-3 lg:justify-between gap-5'>
 {
   projects.map((project)=>(
-    <div className="max-w-md mx-auto bg-slate-100 rounded-lg overflow-hidden shadow-xl hover:shadow-lg transition-shadow duration-300 ">
+    <div className="max-w-md mx-auto bg-slate-100 rounded-lg overflow-hidden shadow-xl hover:shadow-lg transition-shadow duration-300 " key={project.id}>
       <a href={project.link} title={project.name}>
         <div className="overflow-hidden">
           <img
-            className="w-full h-56 object-cover object-center transform transition-transform duration-300 hover:scale-110 "
+            className="w-full h-56 object-cover object-center transform transition-transform duration-300 hover:scale-110 z-10 "
             src={project.image}
             alt={project.name}
           />

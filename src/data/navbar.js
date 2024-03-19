@@ -21,12 +21,12 @@ export const navbar = [
   //   path: "#testimonials",
   // },
   {
-    id: 5,
+    id: 4,
     name: "TEAM",
     path: "#team",
   },
   {
-    id: 6,
+    id: 5,
     name: "CONTACT",
     path: "#contact",
   },
