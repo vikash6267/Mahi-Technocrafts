@@ -1,6 +1,5 @@
-import vikas from "../assests/team/vk2-removebg-preview1080.png"
-import vikku from "../assests/team/1.jpg"
-// import dheeraj from "../assests/team/dheeraj1080.png"
+import vikku from "../assests/team/vikku.png"
+import dheeraj from "../assests/team/dheeraj.png"
 import tarun from "../assests/team/tirun1080.png"
 import ayush from "../assests/team/aayush1080.png"
 import rishi from "../assests/team/rishi1080.png"
@@ -62,6 +61,15 @@ export const team = [
         image:harsh,
         link :"https://www.linkedin.com/in/tarun-namdev-4b5246218/",
         exprience :" 3+ Year"
+    },
+
+    {
+        id:7,
+        name:"Dheeraj Singh",
+        desc : "Frontend Developer",
+        image:dheeraj,
+        link :"https://www.linkedin.com/in/tarun-namdev-4b5246218/",
+        exprience :" 3+ Month"
     },
 
    
