@@ -1,5 +1,5 @@
 import vikas from "../assests/team/vk2-removebg-preview1080.png"
-import vikku from "../assests/team/vik.JPG"
+import vikku from "../assests/team/1.jpg"
 // import dheeraj from "../assests/team/dheeraj1080.png"
 import tarun from "../assests/team/tirun1080.png"
 import ayush from "../assests/team/aayush1080.png"
