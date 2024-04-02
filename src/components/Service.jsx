@@ -5,7 +5,7 @@ function Service() {
   return (
     <div className="services mx-auto w-full font-Raleway min-h-full ">
       <div className="lg:w-11/12 mx-auto p-5 flex flex-col items-center">
-        <div className="font-Raleway text-white">
+        <div className=" font-DM text-black">
           <h2 className="text-center font-Raleway text-4xl">OUR SERVICES</h2>
           <p className="text-xl pt-3 text-center">
             You Imagine , We Creates : A Perfect Partnership.
@@ -15,11 +15,11 @@ function Service() {
         <div className="grid lg:grid-cols-3 justify-between w-full ">
           {
             service.map((ser,index)=>(
-              <div key={index} className=" flex flex-col items-center gap-2 p-5 text-gray-300 leading-6  font-extralight text-center">
+              <div key={index} className=" flex flex-col items-center gap-2 p-5  text-black leading-6  font-extralight text-center">
                 <div
                 className="icon flex items-center justify-center"
                 >{ser.image}</div>
-                <p className=" font-semibold text-white">{ser.name}</p>
+                <p className=" font-semibold text-black ">{ser.name}</p>
                 <p className="p-1">{ser.desc}</p>
               </div>
             ))

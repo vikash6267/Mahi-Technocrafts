@@ -134,13 +134,13 @@ const toasdID = toast.loading("loading")
        
         <div >
       <p className="flex items-center gap-1">  <MdOutlineLocationOn /> Address :-</p>
-       <a href="https://maps.app.goo.gl/KQUg1hnmzbbyrn4TA"> Bhopal, Madhya Pradesh 462001</a>
+       <a href="https://maps.app.goo.gl/WrnEEvHzNrGxyknn7"> Mahi Technocrafts, Hamidia Road, Bhopal, Madhya Pradesh 462001</a>
         </div>
 
 
         <div >
       <p className="flex items-center gap-1">   <IoCallOutline />  Phone :-</p>
-       <a className=" font-oswald" href="tel:+916267144122"> +916267144122</a>
+       <a className=" font-oswald" href="tel:+916267144122"> +916267144122</a>  
         </div>
       
         <div >

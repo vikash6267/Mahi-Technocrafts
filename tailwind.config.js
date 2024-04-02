@@ -11,9 +11,16 @@ module.exports = {
       oswald:   ['Oswald', "sans-serif"],
       mono: ["Roboto Mono", "monospace"],
       ubuntu:['Ubuntu', "sans-serif"],
+      DM:[ "DM Sans", "sans-serif"]
 
     },
-    extend: {},
+    extend: {
+      colors: {
+        custom: {
+          'light-blue': '#070054',
+        },
+      },
+    },
   },
   plugins: [],
 }

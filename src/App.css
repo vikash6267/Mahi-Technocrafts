@@ -18,12 +18,12 @@ body {
   scrollbar-color: #afb2bf;
 }
 
-li a{
+ li a{
   width: max-content;
   position: relative;
   cursor: pointer;
-}
-li a::after{
+} 
+ li a::after{
   content: "";
   position: absolute;
   bottom: -5px;
@@ -34,17 +34,26 @@ li a::after{
   transition: 0.3s;
   transition-timing-function: easy-in-out;
   transform: scaleX(0)
-}
+} 
  li a:hover::after
 {
   transform: scaleX(1)
 }
 
 .background{
-  background-color: #afb2bf;
-  background-image: url("./assests/hero-section-2.jpg");
- background-size: cover;
+  /* height: calc(100vh - 60px); */
+  /* background-color: #264AC5; */
+  /* background: linear-gradient(diagonally , #ffffff 20%, #8dbef3 40%, #68a7eb 60%, #3d92ec 80%, #0174ee 100%); */
+
+  background: linear-gradient(10.21deg, #264ac5 40.91%, #eaeeff 111.58%);
+
+  /* background-image: url("./assests/hero-section-2.jpg"); */
+ /* background-size: cover; */
 }
+
+
+
+
 .bgimage{
   height: 300px;
   width:330px;
@@ -53,25 +62,22 @@ li a::after{
   background-attachment: scroll;
 }
 
-.services{
+.cont{
+  background: rgb(255,255,255);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(97, 144, 197, 0.774) 50% ,  rgb(78, 111, 161) 100%);
 
-  /* background-image: url("./assests/services.jpeg");
-  background-size: cover; */
-
-  /* background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 6%, rgba(7,14,61,0.9360119047619048) 57%, rgba(0,212,255,1) 89%); */
-background-color: #0093E9;
-background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
-
-
+ 
 }
+
 
 .icon {
   font-size: 42px;
   width: 120px;
   height: 120px;
   padding: 40px 0;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  /* background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);*/
+  background: rgb(63,228,251);
+background: radial-gradient(circle, rgba(63,228,251,0.6867121848739496) 0%, rgba(70,116,252,1) 100%);
   border-radius: 50%;
   color: #fff;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
@@ -208,7 +214,32 @@ background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
 
 
 .active-link {
-  color: #4a90e2;
-  position: relative; /* Required for positioning the pseudo-element */
+  /* color: #4a90e2; */
+  /* position: relative; Required for positioning the pseudo-element */
+  background: #000;
+  color: white;
+  padding: 4px 8px 4px 8px;
+  border-radius: 20px;
 }
 
+.projects{
+  background: rgb(255,255,255);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(155, 195, 250, 0.774) 100%);
+}
+
+.team{
+  min-height: 100vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(155, 195, 250, 0.774) 100%);
+}
+
+
+@media only screen and (max-width: 600px) {
+ .mobile{
+  display: none;
+ }
+
+ .head-media{
+  gap:4em;
+ }
+}

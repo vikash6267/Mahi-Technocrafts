@@ -1,0 +1,107 @@
+import React, { useEffect, useState } from 'react'
+import { IoReorderThreeSharp } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
+import { navbar } from "../../data/navbar";
+import mainlogo from "../../assests/mainlogo.png"
+
+function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [activeLink, setActiveLink] = useState(window.location.pathname);
+
+
+    useEffect(() => {
+        // Update active link when component mounts
+        setActiveLink(window.location.pathname);
+      }, []);
+
+    const handleLinkClick = (path) => {
+        setActiveLink(path);
+        setIsOpen(false);
+      };
+  return (
+    <>
+              <nav className="bg-white  lg:w-11/12 mx-auto z-20 overflow-hidden max-h-[70px]">
+          <div className=" flex flex-wrap items-center justify-between mx-auto p-4">
+            <a
+              href="#top-section"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center space-x-3 rtl:space-x-reverse"
+            >
+            <img src={mainlogo} alt="logo" className="h-[50px] p-0"  />
+              <span className="self-center text-2xl font-semibold whitespace-nowrap ">
+                <span className=" font-bold text-blue-500 text-3xl">M</span>ahi{" "}
+                <span className=" font-bold text-blue-500 text-3xl">T</span>echnoCrafts
+              </span>
+            </a>
+
+            <div
+              className="hidden w-full lg:block md:w-auto relative"
+              id="navbar-default"
+            >
+              <ul className="font-bold flex  flex-col p-2 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row  rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+                {navbar.map((menu, index) => (
+                  <li key={menu.id}>
+                    <a
+                      href={menu.path}
+                      className={`scroll px-3 ${
+                        activeLink === menu.path ? "active-link" : ""
+                      }`}
+                      onClick={() => handleLinkClick(menu.path)}
+                    >
+                      {menu.name}
+                    </a>
+                  </li>
+                ))}
+                <span className="hover-effect"></span>
+              </ul>
+            </div>
+
+            <div className="text-3xl lg:hidden ">
+              {!isOpen ? (
+                <IoReorderThreeSharp
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="cursor-pointer"
+                />
+              ) : (
+                <IoClose
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="cursor-pointer"
+                />
+              )}
+            </div>
+          </div>
+        </nav>
+        <div
+  className={`${
+    isOpen ? "h-auto w-full" : "h-0 w-0 "
+  } z-[100] flex justify-start items-center transition-all duration-[0.5s] flex-col overflow-hidden`}
+>
+  <ul
+    className={`p-2 text-center lg:hidden bg-white ${
+      isOpen
+        ? "opacity-100 duration-[0.5s]"
+        : "opacity-0 "
+    } w-full`}
+  >
+    {navbar.map((menu, index) => (
+      <li className="pt-3" key={menu.id}>
+        <a
+          href={menu.path}
+          onClick={() => handleLinkClick(menu.path)}
+          className={`scroll ${
+            isOpen ? "" : "opacity-0 pointer-events-none"
+          } transition-opacity ${
+            activeLink === menu.path ? "active-link" : ""
+          }`}
+        >
+          {menu.name}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+    </>
+  )
+}
+
+export default Navbar

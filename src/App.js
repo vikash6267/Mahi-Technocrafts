@@ -7,7 +7,7 @@ function App() {
   
   return (
     <div className="min-h-screen w-screen">
-      <Loader/>
+      {/* <Loader/> */}
 
 <Navbar />
     <div className="fixed bottom-8 md:right-10 right-4">
