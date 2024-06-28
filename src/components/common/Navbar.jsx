@@ -26,12 +26,12 @@ function Navbar() {
    
 
       {/* top section */}
-      <div className="  lg:gap-y-6 text-4xl  mx-auto" id="top-section">
+      <div className="  " id="top-section">
         <HeroSection/>
    
       </div>
      
-      <div className='min-h-[70px] bg-white w-full flex items-center h-[50px] justify-center'> 
+      {/* <div className='min-h-[70px] bg-white w-full flex items-center h-[50px] justify-center'> 
   <ul className='w-11/12 mx-auto flex lg:gap-32 md:gap-20 gap-8'>
     {
       langu.map((lang, index) => (
@@ -41,7 +41,7 @@ function Navbar() {
       ))
     }
   </ul>
-</div>
+</div> */}
 
 
  <div className="pt-[80px] pb-14 projects" id="projects">

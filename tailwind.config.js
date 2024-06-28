@@ -11,7 +11,9 @@ module.exports = {
       oswald:   ['Oswald', "sans-serif"],
       mono: ["Roboto Mono", "monospace"],
       ubuntu:['Ubuntu', "sans-serif"],
-      DM:[ "DM Sans", "sans-serif"]
+      DM:[ "DM Sans", "sans-serif"],
+      fjalla: ['"Fjalla One"', 'sans-serif'],
+
 
     },
     extend: {
