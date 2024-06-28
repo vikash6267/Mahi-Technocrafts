@@ -1,67 +1,31 @@
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, Autoplay  } from 'swiper/modules';
-import { Virtual } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/virtual';
 
 
 import { projects } from '../../data/projects';
 export default () => {
   return (
-    <Swiper   
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, Autoplay  ,Virtual]}
-      spaceBetween={50}
-      slidesPerView={1}
-      navigation
-      
-      pagination={{ clickable: true }}
-    //   scrollbar={{ draggable: true }}
-    //   onSwiper={(swiper) => console.log(swiper)}
-    //   onSlideChange={() => console.log('slide change')}
-      loop = {true}
-      autoplay={{ delay: 2000  , pauseOnMouseEnter : false , disableOnInteraction : true}}
-     className='z-0 '
-    
+  <>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-10 gap-10 lg:gap-10 px-2">
+  {projects.map((currElem) => (
+    <a
+      href={currElem.link}
+      target='_blank'
+      className="max-w-sm min-h-[300px] rounded overflow-hidden bg-gray-100 workCard p-2 shadow-2xl shadow-amber-400"
+      key={currElem.id}
     >
-     
-    
-     <div className="  w-11/12 mx-auto  ">
-          {projects.map((project) => (
-            <SwiperSlide
-              className="   overflow-hidden   "
-              key={project.id}
-            >
-              <div className="overflow-hidden">
-                  <img
-                    className=" object-cover   w-11/12 mx-auto "
-                    src={project.image}
-                    alt={project.name}
-                   
-                  />
-                </div>
-              <a href={project.link} title={project.name}>
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2 text-amber-950">
-                  {project.name}
-                </div>
-                <p className="text-gray-700 text-base">{project.desc}</p>
-              </div>
-              </a>
-
-             
-            </SwiperSlide>
-          ))}
+      <img className="w-full h-[50%]" src={currElem.image} alt="Example Image" />
+      <div className="px-6 py-4">
+        <div className="font-bold text-2xl mb-4 text-center">
+          {currElem.name}
         </div>
-    
-    
-    
-    </Swiper>
+        <p className="text-gray-700 text-base text-center">
+          {currElem.desc}
+        </p>
+      </div>
+    </a>
+  ))}
+</div>
+
+  </>
   );
 };

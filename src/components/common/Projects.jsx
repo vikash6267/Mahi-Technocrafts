@@ -9,50 +9,21 @@ import Testing from "../core/Testing";
 function Projects() {
   return (
     <div className="w-11/12 mx-auto flex flex-col justify-center relative ">
-      {/* <div>
-          <div className="font-Raleway text-black">
-                <h2 className="text-center font-Raleway text-4xl">OUR PROJECTS</h2>
-                <p className="text-xl pt-3 text-center">
-                    .At the crossroads of innovation and excellence, our web solutions stand as beacons of digital prowess.
-                </p>
-        </div>
-        <div className='grid lg:grid-cols-3 lg:justify-between gap-5'>
-{
-  projects.map((project)=>(
-    <div className="max-w-md mx-auto bg-slate-100 rounded-lg overflow-hidden shadow-xl hover:shadow-lg transition-shadow duration-300 " key={project.id}>
-      <a href={project.link} title={project.name}>
-        <div className="overflow-hidden">
-          <img
-            className="w-full h-56 object-cover object-center transform transition-transform duration-300 hover:scale-110 z-10 "
-            src={project.image}
-            alt={project.name}
-          />
-        </div>
-      </a>
-
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2 text-amber-950">{project.name}</div>
-        <p className="text-gray-700 text-base">{project.desc}</p>
-      </div>
-    </div>
-  ))
-}
-        </div>
-        </div> */}
+    
 
       <div className=" w-full flex justify-center text-center  ">
         <div className=" lg:w-[50%] space-y-4 ">
           <div>
-            <h3 className=" bg-slate-50 inline-block p-1 px-3 rounded-lg border border-slate-200 text-[13px]">
+            <h3 className="  inline-block p-1 px-3 rounded-lg border border-gray-500 text-[13px]">
               Boost your productivity
             </h3>
           </div>
-          <h2 className=" font-DM font-semibold lg:text-[3rem] md:text-[3rem] text-[2.2rem] leading-none  ">
+          <h2 className="  font-semibold lg:text-[3rem] md:text-[3rem] text-[2rem] leading-tight font-DM  ">
             A more effective way <br />{" "}
-            <span className=" text-cyan-900">to track progress</span>
+            <span className=" text-cyan-900">to track progress of <br /> <span className=" text-orange-400">Mahi Technocrafts</span></span>
           </h2>
 
-          <p className="text-[22px]">
+          <p className="lg:text-[22px] text-sm font-ubuntu lg:leading-8 leading-6 ">
             Effortlessly turn your ideas into a fully functional, responsive,
             no-code SaaS website in just minutes with the set of free components
             for Framer.
@@ -61,49 +32,25 @@ function Projects() {
       </div>
 
       <div className=" z-0 lg:mt-10 ">
-        {/* <div className="grid lg:grid-cols-4 lg:justify-between gap-8 p-8">
-          {projects.map((project) => (
-            <div
-              className="max-w-md mx-auto bg-slate-100 rounded-lg overflow-hidden shadow-xl hover:shadow-lg transition-shadow duration-300 "
-              key={project.id}
-            >
-              <a href={project.link} title={project.name}>
-                <div className="overflow-hidden">
-                  <img
-                    className="w-full h-48 object-cover object-center transform transition-transform duration-300 hover:scale-110 z-10 "
-                    src={project.image}
-                    alt={project.name}
-                  />
-                </div>
-              </a>
-
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2 text-amber-950">
-                  {project.name}
-                </div>
-                <p className="text-gray-700 text-base">{project.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div> */}
+      
 
 <Testing/>
 
       </div>
 
-      <div className="mt-10 font-DM w-11/12 mx-auto">
+      <div className="mt-10 font-DM w-11/12 mx-auto ">
         <ul className="flex flex-wrap justify-center lg:justify-evenly items-start head-media  ">
           {heading.map((head) => (
             <li
-              className=" lg:w-[22%] flex flex-col gap-1 lg:gap-2  "
+              className=" lg:w-[22%] min-h-[220px] flex flex-col gap-1 lg:gap-2 shadow-2xl shadow-rose-600 px-3 py-3 hover:scale-95 "
               key={head.title}
             >
               <div>
                 <img src={head.icon} alt="" />
               </div>
-              <h3 className="lg:text-xl font-semibold">{head.title}</h3>
-              <p>{head.desc}</p>
-              <a href="#" className="flex items-center gap-2 mt-2 text-start">
+              <h3 className="lg:text-lg font-semibold text-[#2527c7b6] font-ubuntu ">{head.title}</h3>
+              <p className=" text-[14px]">{head.desc}</p>
+              <a href="#" className="flex items-center gap-2 mt-2 text-start text-[14px] text-[#19034db6]">
                 Learn More
                 <FaArrowRight className="" />
               </a>

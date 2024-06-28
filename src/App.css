@@ -236,6 +236,16 @@ background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(155, 195, 25
 }
 
 
+
+.workCard:nth-child(even):hover {
+  background-color: #f78da7;
+}
+
+.workCard:nth-child(odd):hover {
+  background-color: #fcb900;
+}
+
+
 @media only screen and (max-width: 600px) {
  .mobile{
   display: none;

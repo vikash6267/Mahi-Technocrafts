@@ -3,7 +3,7 @@ import { service } from "../data/service";
 
 function Service() {
   return (
-    <div className="services mx-auto w-full font-Raleway min-h-full ">
+    <div className=" mx-auto w-full font-Raleway min-h-full ">
       <div className="lg:w-11/12 mx-auto p-5 flex flex-col items-center">
         <div className=" font-DM text-black">
           <h2 className="text-center font-Raleway text-4xl">OUR SERVICES</h2>

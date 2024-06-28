@@ -31,20 +31,10 @@ function Navbar() {
    
       </div>
      
-      {/* <div className='min-h-[70px] bg-white w-full flex items-center h-[50px] justify-center'> 
-  <ul className='w-11/12 mx-auto flex lg:gap-32 md:gap-20 gap-8'>
-    {
-      langu.map((lang, index) => (
-        <li key={index} className={lang.class}>
-          <img src={lang.image} alt="" style={{ minWidth: '50px', maxWidth: '90vw' }} />
-        </li>
-      ))
-    }
-  </ul>
-</div> */}
 
 
- <div className="pt-[80px] pb-14 projects" id="projects">
+
+ <div className="pt-[80px] pb-14 " id="projects">
           <Projects />
        
 
@@ -60,23 +50,24 @@ function Navbar() {
         </div> */}
 
 
-      <div className="cont">
+      <div className=" ">
         {/* <div className="pt-5 w-full lg:w-11/12 mx-auto" id="about">
           <AboutUs />
         </div> */}
 
-        <div className="pt-[80px] services " id="service">
+        <div className="pt-[80px]  " id="service">
           <Service />
         </div>
 
        
 
 
-        <div className="pt-[80px] pb-[150px] contacts" id="contact">
+        <div className="pt-[80px]  contacts  " id="contact">
           <Contact />
         </div>
         </div>
-        <div className="h-24 lg:text-end lg:w-11/12 flex items-center lg:justify-center font-Raleway text-sm">
+        
+        <div className="h-24 lg:text-end bg-white lg:w-11/12 flex items-center lg:justify-center font-Raleway text-sm px-5">
           <p> ©2024 Mahi TechnoCrafts Design by <a href="#top-section" className="text-blue-800 underline">Mahi TechnoCrafts</a> & Team </p>
         </div>
      

@@ -3,7 +3,10 @@ import ecom from "../assests/projects/ecom.png"
 import lms from "../assests/projects/lms.png"
 import blog from "../assests/projects/blog.png"
 import akt from "../assests/projects/akt.png"
-
+import absence from "../assests/projects/absence.png"
+import theexp from "../assests/projects/export.png"
+import ngo from "../assests/projects/ngo.png"
+import dic from "../assests/projects/dics.png"
 export const projects = [
     {
         id:1,
@@ -15,15 +18,43 @@ export const projects = [
     {
         id:2, 
         name:"Library Management System",
-        desc : "LMS For MK Ponda College Bhopal",
+        desc : "Modern E-Commerce With Advance Functionality",
         link : "https://library-mangment-system.vercel.app/" ,
-        image:lms
+        image:absence
+    },
+    {
+        id:5,
+        name:"Absence (Clothing Brand)",
+        desc : "Finance Sector",
+        link : "https://akt-enterprises.com/" ,
+        image:akt
+    },
+    {
+        id:6,
+        name:"Culinary Exports International",
+        desc : "CULINARY EXPORTS REDEFINING PALATES WORLDWIDE ",
+        link : "https://www.teampahal.org/" ,
+        image:theexp
+    },
+    {
+        id:7,
+        name:"NGO ",
+        desc : "Team Pahal Bareli  ",
+        link : "https://the-bharat.vercel.app/" ,
+        image:ngo
+    },
+    {
+        id:8,
+        name:"Gangte Dictionary ",
+        desc : "dictionary English to Gangte  ",
+        link : "https://the-bharat.vercel.app/" ,
+        image:dic
     },
     {
         id:3,
         name:"E-Commerce",
         desc : "Basic E-Commerce",
-        link : "e-commerce-taupe-alpha.vercel.app" ,
+        link : "https://e-commerce-taupe-alpha.vercel.app" ,
         image:ecom
     },
 
@@ -35,11 +66,13 @@ export const projects = [
         image:blog
     },
     {
-        id:4,
+        id:9,
         name:"AKT Enterprises",
         desc : "Finance Sector",
         link : "https://akt-enterprises.com/" ,
         image:akt
     },
+
+
 ]
 

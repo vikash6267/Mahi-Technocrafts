@@ -33,7 +33,7 @@ export default () => {
       },
       // When screen width is greater than 768px
       1024: {
-        slidesPerView: 2,
+        slidesPerView: 3,
       },
     }}
   >

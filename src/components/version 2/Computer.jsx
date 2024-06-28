@@ -1,23 +1,16 @@
-import React, { Suspense, useEffect, useState, useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import React, { Suspense, useEffect, useState } from "react";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "./Loader";
 
 const Computers = ({ isMobile }) => {
+  console.log(isMobile)
   const computer = useGLTF("./desktop_pc/scene.gltf");
-  const computerRef = useRef();
-
-  // Rotate the object continuously
-  useFrame(() => {
-    if (computerRef.current) {
-      computerRef.current.rotation.y += 0.008; // Adjust the speed as needed
-    }
-  });
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black" />
+      <hemisphereLight intensity={0.15} groundColor='black' />
       <spotLight
         position={[-18, 10, 10]}
         angle={0.12}
@@ -28,7 +21,6 @@ const Computers = ({ isMobile }) => {
       />
       <pointLight intensity={1} />
       <primitive
-        ref={computerRef}
         object={computer.scene}
         scale={isMobile ? 0.4 : 0.75}
         position={isMobile ? [0, -3, -1.2] : [0, -3.25, -1.5]}
@@ -39,9 +31,10 @@ const Computers = ({ isMobile }) => {
 };
 
 const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
+ const [isMobile, setIsMobile] = useState(false);
+
+   useEffect(() => {
     // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
 
@@ -64,6 +57,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
+      frameloop='demand'
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
@@ -75,7 +69,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Computers isMobile={isMobile}/>
       </Suspense>
 
       <Preload all />
@@ -84,3 +78,6 @@ const ComputersCanvas = () => {
 };
 
 export default ComputersCanvas;
+
+
+

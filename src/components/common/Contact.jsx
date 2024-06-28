@@ -6,6 +6,8 @@ import { apiConnector } from "../../services/apiConnector"
 import { contactusEndpoint } from "../../services/apis"
 import toast from "react-hot-toast";
 import { IoLogoInstagram } from "react-icons/io5";
+import { FaLinkedin } from "react-icons/fa";
+
 
 function Contact() {
   const [formdata, setFormData] = useState({
@@ -60,102 +62,97 @@ const toasdID = toast.loading("loading")
 
   }
   return (
-    <div className="w-11/12 mx-auto flex gap-8 justify-between pt-20 flex-wrap-reverse">
-      
-      <div className="lg:w-[60%] flex flex-col">
-        <div className="font-Raleway">
-          <h2 className="text-white font-bold text-4xl">GET IN TOUCH</h2>
-          <p className="pt-4 text-gray-300">
-            Please fill out the form below to contact us and we will get back to
-            you as soon as possible.
-          </p>
-        </div>
+    <div className="flex gap-8 justify-between  flex-wrap-reverse bg-gray-900 bg-opacity-90 p-8  shadow-lg">
 
-        <div className="pt-12">
-          <form className="space-y-4 " onSubmit={submitHandle}>
-            <div className="flex flex-col">
-              <label htmlFor="firstname" className="text-[16px] text-white p-2">
-                Your Name
-              </label>
-              <input
-                required
-                type="text"
-                name="firstname"
-                id="firstname"
-                className="rounded-lg bg-gray-700 p-3 text-[16px] leading-[24px] text-white shadow-[0_1px_0_0] shadow-white/50 placeholder:text-blue-100 focus:outline-non"
-                placeholder="Enter Your Name"
-                onChange={changeHandler}
-                value={formdata.firstname}
-              />
-            </div>
-
-            <div className="flex flex-col">
-              <label className="text-[16px] text-white p-2" htmlFor="email">
-                Your Email-ID
-              </label>
-              <input
-                required
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter Your Email"
-                className="rounded-lg bg-gray-700 p-3 text-[16px] leading-[24px] text-white shadow-[0_1px_0_0] shadow-white/50 placeholder:text-blue-100 focus:outline-non"
-                onChange={changeHandler}
-                value={formdata.email}
-              />
-            </div>
-
-            <div className="flex flex-col">
-              <label className="text-[16px] text-white p-2" htmlFor="message">
-                Your Message
-              </label>
-              <textarea
-                name="message"
-                required
-                id="message"
-                placeholder="Enter Your message"
-                className="rounded-lg bg-gray-700 p-3 text-[16px] leading-[24px] text-white shadow-[0_1px_0_0] shadow-white/50 placeholder:text-blue-100 focus:outline-non"
-                onChange={changeHandler}
-                value={formdata.message}
-              />
-            </div>
-            <div className=" pt-3">
-              <button className=" bg-gray-300 p-3 rounded-3xl hover:bg-blue-300 transition-all border-black border-2">
-                Send Message
-              </button>
-            </div>
-          </form>
-        </div>
+    <div className="lg:w-[60%] flex flex-col">
+      <div className="font-Raleway">
+        <h2 className="text-white font-bold text-4xl mb-4">GET IN TOUCH</h2>
+        <p className="text-gray-300 mb-8">
+          Please fill out the form below to contact us and we will get back to you as soon as possible.
+        </p>
       </div>
 
-      <div className="lg:w-[35%]">
-      <div className=" uppercase text-white font-bold text-2xl font-Raleway">Contact Info</div>
-        <div className="lg:pt-14 flex flex-col gap-5 text-white text-[15x]">
-       
-        <div >
-      <p className="flex items-center gap-1">  <MdOutlineLocationOn /> Address :-</p>
-       <a href="https://maps.app.goo.gl/WrnEEvHzNrGxyknn7"> Mahi Technocrafts, Hamidia Road, Bhopal, Madhya Pradesh 462001</a>
-        </div>
+      <div>
+        <form className="space-y-6" onSubmit={submitHandle}>
+          <div className="flex flex-col">
+            <label htmlFor="firstname" className="text-[16px] text-white mb-2">Your Name</label>
+            <input
+              required
+              type="text"
+              name="firstname"
+              id="firstname"
+              className="rounded-lg bg-gray-700 p-4 text-[16px] leading-[24px] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter Your Name"
+              onChange={changeHandler}
+              value={formdata.firstname}
+            />
+          </div>
 
+          <div className="flex flex-col">
+            <label className="text-[16px] text-white mb-2" htmlFor="email">Your Email-ID</label>
+            <input
+              required
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter Your Email"
+              className="rounded-lg bg-gray-700 p-4 text-[16px] leading-[24px] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={changeHandler}
+              value={formdata.email}
+            />
+          </div>
 
-        <div >
-      <p className="flex items-center gap-1">   <IoCallOutline />  Phone :-</p>
-       <a className=" font-oswald" href="tel:+916267144122"> +916267144122</a>  
+          <div className="flex flex-col">
+            <label className="text-[16px] text-white mb-2" htmlFor="message">Your Message</label>
+            <textarea
+              name="message"
+              required
+              id="message"
+              
+              placeholder="Enter Your message"
+              className="rounded-lg bg-gray-700 p-4 h-32 text-[16px] leading-[24px] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={changeHandler}
+              value={formdata.message}
+            />
+          </div>
+          <div className="pt-3">
+            <button className="w-full bg-gray-400 p-3 text-xl rounded-lg text-black font-semibold hover:bg-transparent hover:text-white hover:border-2 border-white hover:scale-95 transition-all">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div className="lg:w-[35%] flex flex-col gap-8">
+      <div className="uppercase text-white font-bold text-2xl font-Raleway mb-4">Contact Info</div>
+      <div className="flex flex-col gap-5 text-white text-[15px]">
+        <div>
+          <p className="flex items-center gap-2"><MdOutlineLocationOn className="text-2xl" /> Address :</p>
+          <a href="https://maps.app.goo.gl/WrnEEvHzNrGxyknn7" className="text-blue-400 hover:underline">Mahi Technocrafts, Hamidia Road, Bhopal, Madhya Pradesh 462001</a>
         </div>
-      
-        <div >
-      <p className="flex items-center gap-1">  <MdOutlineMail />  Email :-</p>
-       <a className=" font-oswald" href="mailto:mahitechnocrats@gmail.com"> mahitechnocrats@gmail.com</a>
-        </div>
-        
 
         <div>
-         <p className=" font-Raleway text-2xl from-neutral-600">Follow US</p>
-         <a href="https://www.instagram.com/mahi_technocrafts" className="flex gap-3" target="_blank"><IoLogoInstagram  className="text-2xl text-red-700"/>@mahi_technocrafts</a>
+          <p className="flex items-center gap-2"><IoCallOutline className="text-2xl" /> Phone :</p>
+          <a className="font-oswald text-blue-400 hover:underline" href="tel:+916267144122">+91 62671 44122</a>
         </div>
+
+        <div>
+          <p className="flex items-center gap-2"><MdOutlineMail className="text-2xl" /> Email :</p>
+          <a className="font-oswald text-blue-400 hover:underline" href="mailto:support@mahitechnocrafts.in">support@mahitechnocrafts.in</a>
+        </div>
+ 
+        <div>
+          <p className="font-Raleway text-2xl text-neutral-400 mb-2">Follow Us</p>
+          <a href="https://linkedin.com/company/mahi-technocrafts" className="text-blue-400 hover:underline flex  items-center gap-3 mt-1" target="_blank" rel="noopener noreferrer"> <FaLinkedin className="text-2xl" /> Mahi Technocrafts</a>
+          <a href="https://www.instagram.com/mahi_technocrafts" className="flex items-center gap-3 text-red-500 hover:underline mt-3" target="_blank" rel="noopener noreferrer">
+            <IoLogoInstagram className="text-2xl" /> @mahi_technocrafts
+          </a>
+         
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

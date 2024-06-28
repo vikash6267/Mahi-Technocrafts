@@ -10,10 +10,10 @@ export const team = [
     {
         id:1,
         name:"Vikash Maheshwari",
-        desc : "Full Stack Web Developer ",
+        desc : "Full Stack Web Developer  ",
         image:vikku,
         link :"https://www.linkedin.com/in/vikash-maheshwari-1191a9277/",
-        exprience :" 1+ Year"
+        exprience :" 2+ Year"
 
     
     },
@@ -33,7 +33,7 @@ export const team = [
         desc : "Full Stack Web Developer",
        image:rishi,
        link :"#",
-       exprience :" 1+ Year"
+       exprience :" 2+ Year"
 
     },
 
@@ -46,22 +46,22 @@ export const team = [
         exprience :" 3+ Year"
     },
 
-    {
-        id:5,
-        name:"Shreyash Soumpurkar",
-        desc : "Designer & Full Stack Developer  ",
-        image:shreyas,
-        link :"https://www.linkedin.com/in/tarun-namdev-4b5246218/",
-        exprience :" 2+ Year"
-    },
-    {
-        id:6,
-        name:"Harsh Singh Kushwaha",
-        desc : "Designer & Full Stack Developer",
-        image:harsh,
-        link :"https://www.linkedin.com/in/tarun-namdev-4b5246218/",
-        exprience :" 3+ Year"
-    },
+    // {
+    //     id:5,
+    //     name:"Shreyash Soumpurkar",
+    //     desc : "Designer & Full Stack Developer  ",
+    //     image:shreyas,
+    //     link :"https://www.linkedin.com/in/tarun-namdev-4b5246218/",
+    //     exprience :" 2+ Year"
+    // },
+    // {
+    //     id:6,
+    //     name:"Harsh Singh Kushwaha",
+    //     desc : "Designer & Full Stack Developer",
+    //     image:harsh,
+    //     link :"https://www.linkedin.com/in/tarun-namdev-4b5246218/",
+    //     exprience :" 3+ Year"
+    // },
 
     {
         id:7,
@@ -69,7 +69,7 @@ export const team = [
         desc : "Frontend Developer",
         image:dheeraj,
         link :"https://www.linkedin.com/in/tarun-namdev-4b5246218/",
-        exprience :" 3+ Month"
+        exprience :" 6+ Month"
     },
 
    
