@@ -218,8 +218,9 @@ background: radial-gradient(circle, rgba(63,228,251,0.6867121848739496) 0%, rgba
 .active-link {
   /* color: #4a90e2; */
   /* position: relative; Required for positioning the pseudo-element */
-  background: #000;
-  color: white;
+  /* background: #314b81; */
+  color: #0043fa;
+  font-weight: 900;
   padding: 4px 8px 4px 8px;
   border-radius: 20px;
 }
@@ -255,3 +256,73 @@ background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(155, 195, 25
   gap:4em;
  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes rotateCube {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.cube-container {
+  width: 100px;
+  height: 100px;
+  perspective: 500px;
+  margin: auto;
+  position: relative;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotateCube 7s linear infinite;
+}
+
+.cube-face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.cube-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Positioning the cube faces */
+.cube-face.front  { transform: rotateY(  0deg) translateZ(50px); }
+.cube-face.back   { transform: rotateY(180deg) translateZ(50px); }
+.cube-face.right  { transform: rotateY( 90deg) translateZ(50px); }
+.cube-face.left   { transform: rotateY(-90deg) translateZ(50px); }
+.cube-face.top    { transform: rotateX( 90deg) translateZ(50px); }
+.cube-face.bottom { transform: rotateX(-90deg) translateZ(50px); }

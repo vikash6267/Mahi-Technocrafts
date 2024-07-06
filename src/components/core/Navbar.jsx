@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { IoReorderThreeSharp } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { navbar } from "../../data/navbar";
-import mainlogo from "../../assests/mainlogo.png"
+import mainlogo from "../../assests/logo.png"
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,18 +19,19 @@ function Navbar() {
         setIsOpen(false);
       };
   return (
-    <>
-              <nav className="bg-white  lg:w-11/12 mx-auto z-20 overflow-hidden max-h-[70px]">
+    <div
+className=' w-screen bg-gray-300 '>
+              <nav className="  lg:w-11/12 mx-auto z-20 overflow-hidden max-h-[70px]">
           <div className=" flex flex-wrap items-center justify-between mx-auto p-4">
             <a
               href="#top-section"
               onClick={() => setIsOpen(false)}
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
-            <img src={mainlogo} alt="logo" className="h-[50px] p-0"  />
+            <img src={mainlogo} alt="logo" className="h-[40px] p-0"  />
               <span className="self-center text-2xl font-semibold whitespace-nowrap ">
-                <span className=" font-bold text-blue-500 text-3xl">M</span>ahi{" "}
-                <span className=" font-bold text-blue-500 text-3xl">T</span>echnoCrafts
+                {/* <span className=" font-bold text-blue-500 text-3xl">M</span>ahi{" "}
+                <span className=" font-bold text-blue-500 text-3xl">T</span>echnoCrafts */}
               </span>
             </a>
 
@@ -38,7 +39,7 @@ function Navbar() {
               className="hidden w-full lg:block md:w-auto relative"
               id="navbar-default"
             >
-              <ul className="font-bold flex  flex-col p-2 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row  rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+              <ul className="font- flex font-DM font-semibold   flex-col p-2 md:p-0 mt-4 border md:flex-row  rtl:space-x-reverse md:mt-0 md:border-0">
                 {navbar.map((menu, index) => (
                   <li key={menu.id}>
                     <a
@@ -100,7 +101,7 @@ function Navbar() {
     ))}
   </ul>
 </div>
-    </>
+    </div>
   )
 }
 

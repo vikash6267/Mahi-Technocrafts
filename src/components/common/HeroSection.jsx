@@ -6,6 +6,9 @@ import halftorus from "../../assests/half-torus.png"
 import { langu } from '../../data/lang';
 import ComputersCanvas from '../version 2/Computer';
 import { motion } from "framer-motion"
+import Cube from "../Cube"
+
+
 
 const styles = {
   paddingX: "sm:px-16 px-6",
@@ -48,10 +51,11 @@ function HeroSection() {
 
 
   return (
-    <div className=''
+    <div className='relative'
 
     >
     
+  
 
 <section className="relative w-screen lg:h-screen h-[calc(100vh-160px)]  mx-auto">
       <div className={`${styles.paddingX} absolute inset-0 top-[60px]  max-w-7xl mx-auto flex flex-row items-start gap-5`}>

@@ -7,14 +7,14 @@ function Testimonials() {
 <div className=" w-11/12 mx-auto flex justify-center text-center  ">
         <div className=" lg:w-[50%] space-y-4 ">
           <div>
-            <h3 className=" bg-slate-50 inline-block p-1 px-3 rounded-lg border border-slate-200 text-[13px]">
+            <h4 className=" bg-slate-50 inline-block p-1 px-3 rounded-lg border border-slate-200 text-[13px]">
             Testimonials
-            </h3>
+            </h4>
           </div>
-          <h2 className=" font-DM font-semibold lg:text-[3rem] text-[2.5rem] leading-none  ">
+          <h4 className=" font-DM font-semibold lg:text-[3rem] text-[2.5rem] leading-none  ">
 
             <span className=" text-cyan-900">What our users say</span>
-          </h2>
+          </h4>
 
          
         </div>

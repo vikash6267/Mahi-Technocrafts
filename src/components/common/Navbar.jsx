@@ -51,16 +51,16 @@ function Navbar() {
 
 
       <div className=" ">
-        {/* <div className="pt-5 w-full lg:w-11/12 mx-auto" id="about">
-          <AboutUs />
-        </div> */}
+   
 
         <div className="pt-[80px]  " id="service">
           <Service />
         </div>
 
        
-
+  <div className="pt-5 w-full lg:w-11/12 mx-auto" id="about">
+          <AboutUs />
+        </div> *
 
         <div className="pt-[80px]  contacts  " id="contact">
           <Contact />

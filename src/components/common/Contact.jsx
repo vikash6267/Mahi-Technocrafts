@@ -29,6 +29,32 @@ const{firstname,email,message} = formdata;
     event.preventDefault();
     // console.log(formdata);
 const toasdID = toast.loading("loading")
+
+
+
+try {
+    
+ const response =  await apiConnector(
+ "POST",
+ contactusEndpoint.USER_API,
+ {firstname,email,message}
+)
+
+  if(response){
+    toast.success("Contact Message Succefully Send")
+
+  }
+
+} catch (error) {
+console.log("ERROR MESSAGE - ", error.message)
+
+}
+toast.dismiss(toasdID)
+
+
+
+
+
     try {
     
       const res = await apiConnector(
@@ -37,28 +63,16 @@ const toasdID = toast.loading("loading")
         {firstname,email,message}
       )
   //  console.log(res)
-  if(res){
-    toast.success("Contact Message Succefully Send")
+  // if(res){
+  //   toast.success("Contact Message Succefully Send")
 
-  }
+  // }
     } catch (error) {
       console.log("ERROR MESSAGE - ", error.message)
-    toast.error("Contact Message Cannot Send")
+    // toast.error("Contact Message Cannot Send")
      
     }
-    toast.dismiss(toasdID)
-    try {
-    
-         await apiConnector(
-        "POST",
-        contactusEndpoint.USER_API,
-        {firstname,email,message}
-      )
- 
-    } catch (error) {
-      console.log("ERROR MESSAGE - ", error.message)
-     
-    }
+
 
   }
   return (
@@ -66,22 +80,22 @@ const toasdID = toast.loading("loading")
 
     <div className="lg:w-[60%] flex flex-col">
       <div className="font-Raleway">
-        <h2 className="text-white font-bold text-4xl mb-4">GET IN TOUCH</h2>
-        <p className="text-gray-300 mb-8">
+        <h4 className="text-white font-bold lg:text-4xl text-2xl mb-4">GET IN TOUCH</h4>
+        <p className="text-gray-300 mb-8 text-[12px] lg:text-base">
           Please fill out the form below to contact us and we will get back to you as soon as possible.
         </p>
       </div>
 
       <div>
-        <form className="space-y-6" onSubmit={submitHandle}>
+        <form className="lg:space-y-6" onSubmit={submitHandle}>
           <div className="flex flex-col">
-            <label htmlFor="firstname" className="text-[16px] text-white mb-2">Your Name</label>
+            <label htmlFor="firstname" className="lg:lg:text-[16px] text-[14px] text-[14px] text-white mb-2">Your Name</label>
             <input
               required
               type="text"
               name="firstname"
               id="firstname"
-              className="rounded-lg bg-gray-700 p-4 text-[16px] leading-[24px] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="rounded-lg bg-gray-700 lg:p-4 p-2 lg:text-[16px] text-[14px]  leading-[24px] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter Your Name"
               onChange={changeHandler}
               value={formdata.firstname}
@@ -89,34 +103,34 @@ const toasdID = toast.loading("loading")
           </div>
 
           <div className="flex flex-col">
-            <label className="text-[16px] text-white mb-2" htmlFor="email">Your Email-ID</label>
+            <label className="lg:text-[16px] text-[14px] text-white mb-2" htmlFor="email">Your Email-ID</label>
             <input
               required
               type="email"
               name="email"
               id="email"
               placeholder="Enter Your Email"
-              className="rounded-lg bg-gray-700 p-4 text-[16px] leading-[24px] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="rounded-lg bg-gray-700 p-2 lg:text-[16px] text-[14px] leading-[24px] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               onChange={changeHandler}
               value={formdata.email}
             />
           </div>
 
           <div className="flex flex-col">
-            <label className="text-[16px] text-white mb-2" htmlFor="message">Your Message</label>
+            <label className="lg:text-[16px] text-[14px] text-white mb-2" htmlFor="message">Your Message</label>
             <textarea
               name="message"
               required
               id="message"
               
               placeholder="Enter Your message"
-              className="rounded-lg bg-gray-700 p-4 h-32 text-[16px] leading-[24px] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="rounded-lg bg-gray-700 lg:p-4 p-2 lg:h-32 lg:text-[16px] text-[14px] leading-[24px] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               onChange={changeHandler}
               value={formdata.message}
             />
           </div>
           <div className="pt-3">
-            <button className="w-full bg-gray-400 p-3 text-xl rounded-lg text-black font-semibold hover:bg-transparent hover:text-white hover:border-2 border-white hover:scale-95 transition-all">
+            <button className="w-full bg-gray-400 p-3 lg:ext-xl rounded-lg text-black font-semibold hover:bg-transparent hover:text-white hover:border-2 border-white hover:scale-95 transition-all">
               Send Message
             </button>
           </div>
@@ -124,29 +138,33 @@ const toasdID = toast.loading("loading")
       </div>
     </div>
 
-    <div className="lg:w-[35%] flex flex-col gap-8">
-      <div className="uppercase text-white font-bold text-2xl font-Raleway mb-4">Contact Info</div>
+    <div className="lg:w-[35%] flex flex-col gap-8 ">
+      <div className="uppercase text-white font-bold lg:text-2xl text-xl font-Raleway mb-4">Contact Info</div>
       <div className="flex flex-col gap-5 text-white text-[15px]">
-        <div>
-          <p className="flex items-center gap-2"><MdOutlineLocationOn className="text-2xl" /> Address :</p>
-          <a href="https://maps.app.goo.gl/WrnEEvHzNrGxyknn7" className="text-blue-400 hover:underline">Mahi Technocrafts, Hamidia Road, Bhopal, Madhya Pradesh 462001</a>
+   
+
+  
+   <div>
+          <p className="flex items-center gap-2"><MdOutlineLocationOn className="lg:text-2xl text-[12px]" /> Address :</p>
+          <a href="https://maps.app.goo.gl/WrnEEvHzNrGxyknn7" className="text-blue-400 hover:underline text-[12px]">Mahi Technocrafts, Hamidia Road, Bhopal, Madhya Pradesh 462001</a>
         </div>
 
         <div>
-          <p className="flex items-center gap-2"><IoCallOutline className="text-2xl" /> Phone :</p>
-          <a className="font-oswald text-blue-400 hover:underline" href="tel:+916267144122">+91 62671 44122</a>
+          <p className="flex items-center gap-2"><IoCallOutline className="lg:text-2xl text-[12px]" /> Phone :</p>
+          <a className="font-oswald text-blue-400 hover:underline text-[12px]" href="tel:+916267144122">+91 62671 44122</a>
         </div>
+   
 
         <div>
-          <p className="flex items-center gap-2"><MdOutlineMail className="text-2xl" /> Email :</p>
-          <a className="font-oswald text-blue-400 hover:underline" href="mailto:support@mahitechnocrafts.in">support@mahitechnocrafts.in</a>
+          <p className="flex items-center gap-2"><MdOutlineMail className="lg:text-2xl text-[12px]" /> Email :</p>
+          <a className="font-oswald text-blue-400 hover:underline text-[12px]" href="mailto:support@mahitechnocrafts.in">support@mahitechnocrafts.in</a>
         </div>
  
-        <div>
+        <div className="text-[12px]">
           <p className="font-Raleway text-2xl text-neutral-400 mb-2">Follow Us</p>
-          <a href="https://linkedin.com/company/mahi-technocrafts" className="text-blue-400 hover:underline flex  items-center gap-3 mt-1" target="_blank" rel="noopener noreferrer"> <FaLinkedin className="text-2xl" /> Mahi Technocrafts</a>
+          <a href="https://linkedin.com/company/mahi-technocrafts" className="text-blue-400 hover:underline flex  items-center gap-3 mt-1" target="_blank" rel="noopener noreferrer"> <FaLinkedin className="text-xl" /> Mahi Technocrafts</a>
           <a href="https://www.instagram.com/mahi_technocrafts" className="flex items-center gap-3 text-red-500 hover:underline mt-3" target="_blank" rel="noopener noreferrer">
-            <IoLogoInstagram className="text-2xl" /> @mahi_technocrafts
+            <IoLogoInstagram className="text-xl" /> @mahi_technocrafts
           </a>
          
         </div>

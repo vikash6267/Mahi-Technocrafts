@@ -10,11 +10,11 @@ export const navbar = [
     name: "TEAM",
     path: "#team",
   },
-  // {
-  //   id: 4,
-  //   name: "ABOUT US",
-  //   path: "#about",
-  // },
+  {
+    id: 4,
+    name: "ABOUT US",
+    path: "#about",
+  },
   {
     id: 3,
     name: "SERVICES",

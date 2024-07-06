@@ -8,14 +8,14 @@ function Team() {
       <div className="  flex justify-center text-center  ">
         <div className=" lg:w-[50%] space-y-4  ">
           <div>
-            <h3 className=" bg-slate-50 inline-block p-1 px-3 rounded-lg border border-slate-200 text-[13px]">
+            <h4 className=" bg-slate-50 inline-block p-1 px-3 rounded-lg border border-slate-200 text-[13px]">
               Everything you need
-            </h3>
+            </h4>
           </div>
-          <h2 className="  font-semibold lg:text-[3rem] md:text-[3rem] text-[2rem] leading-tight font-DM  ">
+          <h4 className="  font-semibold lg:text-[3rem] md:text-[3rem] text-[2rem] leading-tight font-DM  ">
             Streamlined for easy <br />{" "}
             <span className=" text-cyan-900">project with our team</span>
-          </h2>
+          </h4>
 
           <p className="lg:text-[22px] text-sm font-ubuntu lg:leading-8 leading-6 ">
             Enjoy customization in your product, tools, and smart tracking all

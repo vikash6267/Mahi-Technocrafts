@@ -20,14 +20,14 @@ export const projects = [
         name:"Library Management System",
         desc : "Modern E-Commerce With Advance Functionality",
         link : "https://library-mangment-system.vercel.app/" ,
-        image:absence
+        image:lms
     },
     {
         id:5,
         name:"Absence (Clothing Brand)",
         desc : "Finance Sector",
-        link : "https://akt-enterprises.com/" ,
-        image:akt
+        link : "https://absense.fashion.mahitechnocrafts.in/" ,
+        image:absence
     },
     {
         id:6,
@@ -47,7 +47,7 @@ export const projects = [
         id:8,
         name:"Gangte Dictionary ",
         desc : "dictionary English to Gangte  ",
-        link : "https://the-bharat.vercel.app/" ,
+        link : "https://dictionary-gangte.vercel.app/" ,
         image:dic
     },
     {
