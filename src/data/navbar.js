@@ -2,11 +2,16 @@ export const navbar = [
  
   {
     id: 1,
+    name: "HOME",
+    path: "#",
+  },
+  {
+    id: 2,
     name: "PROJECTS",
     path: "#projects",
   },
   {
-    id: 2,
+    id: 3,
     name: "TEAM",
     path: "#team",
   },
