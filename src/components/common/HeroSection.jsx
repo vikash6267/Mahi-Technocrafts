@@ -51,7 +51,7 @@ function HeroSection() {
 
 
   return (
-    <div className='relative'
+    <div className='bghero'
 
     >
     
@@ -62,14 +62,14 @@ function HeroSection() {
       
         <div>
           <h1 className={`${styles.heroHeadText} font-DM`}>Welcome To <span className="text-[#314b81]">Mahi TechnoCrafts</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-[#f1111] font-Raleway lg:w-[70%]`}>
+          <p className={`${styles.heroSubText} mt-2 text-[#11143b] font-Raleway lg:w-[70%]`}>
           Elevate your achievements with <span className=''>Mahi Technocrafts</span> software solutions. Track, motivate, and celebrate success with ease.
           </p>
         </div>
 
       </div>
-      <ComputersCanvas />
-      <div className="absolute xs:bottom-10 bottom-32 left-[50%] w-[30px] h-[50px] flex justify-center items-center">
+      {/* <ComputersCanvas /> */}
+      {/* <div className="absolute xs:bottom-10 bottom-32 left-[50%] w-[30px] h-[50px] flex justify-center items-center">
       <a href="#about">
         <div className="">
           <motion.div
@@ -85,9 +85,9 @@ function HeroSection() {
           />
         </div>
       </a>
-    </div>
+    </div> */}
 
-
+{/* 
 { !isScrolled &&   <div className="absolute xs:bottom-10 bottom-0 left-0  h-[50px] flex justify-center items-center bg-blue-500 w-screen lg:hidden">
       <a href="#about">
         <div className="">
@@ -105,7 +105,7 @@ function HeroSection() {
           Scroll Down
         </div>
       </a>
-    </div>}
+    </div>} */}
     </section>
 
 
