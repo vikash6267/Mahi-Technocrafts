@@ -1,3 +1,69 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const BackButtonHandlerComponent = () => {
+  const [showDialog, setShowDialog] = useState(false);
+  const navigate = useNavigate();
+  const handleBackButtonClick = useRef(null);
+
+  // Set the current function to handle the back button click
+  handleBackButtonClick.current = () => {
+    setShowDialog(true);
+  };
+
+  useEffect(() => {
+    const handlePopState = (event) => {
+      event.preventDefault();
+      handleBackButtonClick.current();
+    };
+
+    window.history.pushState(null, '', window.location.href); // Push state to detect back button press
+
+    window.addEventListener('popstate', handlePopState);
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+
+  const handleConfirm = () => {
+    setShowDialog(false);
+    navigate(-1); // Navigate back
+  };
+
+  const handleCancel = () => {
+    setShowDialog(false);
+    window.history.pushState(null, '', window.location.href); // Reset state to stay on the same page
+  };
+
+  return (
+    <div>
+      <h1>Content of the Page</h1>
+      <p>Some important content...</p>
+
+      {showDialog && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded shadow-lg text-center">
+            <p>Are you sure you want to go back? This action cannot be undone.</p>
+            <div className="mt-4 flex justify-center gap-4">
+              <button
+                onClick={handleConfirm}
+                className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+              >
+                Yes, go back
+              </button>
+              <button
+                onClick={handleCancel}
+                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+              >
+                No, stay here
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default BackButtonHandlerComponent;

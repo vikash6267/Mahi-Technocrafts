@@ -33,14 +33,14 @@ export const projects = [
         id:6,
         name:"Culinary Exports International",
         desc : "CULINARY EXPORTS REDEFINING PALATES WORLDWIDE ",
-        link : "https://www.teampahal.org/" ,
+        link : "http://thebharatexporter.com/" ,
         image:theexp
     },
     {
         id:7,
         name:"NGO ",
         desc : "Team Pahal Bareli  ",
-        link : "https://the-bharat.vercel.app/" ,
+        link : "https://www.teampahal.org/" ,
         image:ngo
     },
     {

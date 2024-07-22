@@ -151,7 +151,7 @@ toast.dismiss(toasdID)
 
         <div>
           <p className="flex items-center gap-2"><IoCallOutline className="lg:text-2xl text-[12px]" /> Phone :</p>
-          <a className="font-oswald text-blue-400 hover:underline text-[12px]" href="tel:+916267144122">+91 62671 44122</a>
+          <a className="font-oswald text-blue-400 hover:underline text-[12px] leading-3 " href="tel:+916267144122">+916267144122</a>
         </div>
    
 
