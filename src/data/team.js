@@ -10,7 +10,7 @@ export const team = [
     {
         id:1,
         name:"Vikash Maheshwari",
-        desc : "Full Stack Web Developer  ",
+        desc : "Full Stack Web Developer ",
         image:vikku,
         link :"https://www.linkedin.com/in/vikash-maheshwari-1191a9277/",
         exprience :" 2+ Year"

@@ -7,6 +7,7 @@ import absence from "../assests/projects/absence.png"
 import theexp from "../assests/projects/export.png"
 import ngo from "../assests/projects/ngo.png"
 import dic from "../assests/projects/dics.png"
+import vr from "../assests/projects/vr.png"
 export const projects = [
     {
         id:1,
@@ -15,18 +16,19 @@ export const projects = [
         link : "https://study-notion-frontend-olive.vercel.app/" ,
         image:studynotion
     },
+   
     {
-        id:2, 
-        name:"Library Management System",
-        desc : "Modern E-Commerce With Advance Functionality",
-        link : "https://library-mangment-system.vercel.app/" ,
-        image:lms
+        id:44, 
+        name:"VR Here ",
+        desc : "Find PG / Tifin Facility Near VIT University Bhopal , Kothari , Ashta, Sehore",
+        link : "https://vrhere.in/" ,
+        image:vr
     },
     {
         id:5,
         name:"Absence (Clothing Brand)",
-        desc : "Finance Sector",
-        link : "https://absense.fashion.mahitechnocrafts.in/" ,
+        desc : "Advance E Commerce Wear Absence",
+        link : "https://wearabsence.com",
         image:absence
     },
     {
@@ -44,19 +46,26 @@ export const projects = [
         image:ngo
     },
     {
+        id:2, 
+        name:"Library Management System",
+        desc : "Modern E-Commerce With Advance Functionality",
+        link : "https://library-mangment-system.vercel.app/" ,
+        image:lms
+    },
+    {
         id:8,
         name:"Gangte Dictionary ",
         desc : "dictionary English to Gangte  ",
         link : "https://dictionary-gangte.vercel.app/" ,
         image:dic
     },
-    {
-        id:3,
-        name:"E-Commerce",
-        desc : "Basic E-Commerce",
-        link : "https://e-commerce-taupe-alpha.vercel.app" ,
-        image:ecom
-    },
+    // {
+    //     id:3,
+    //     name:"E-Commerce",
+    //     desc : "Basic E-Commerce",
+    //     link : "https://e-commerce-taupe-alpha.vercel.app" ,
+    //     image:ecom
+    // },
 
     {
         id:4,
