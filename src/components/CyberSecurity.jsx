@@ -50,55 +50,82 @@ const CyberConsultancyPage = () => {
       <Navbar />
 
       <div className="mx-auto max-w-2xl p-8">
-      <Helmet>
-  <title>
-    {isHindi
-      ? 'साइबर कंसल्टेंसी सेवाएं | Mahi Technocrafts | साइबर सुरक्षा और डेटा गोपनीयता'
-      : 'Cyber Consultancy Services | Mahi Technocrafts | Cybersecurity and Data Privacy'}
-  </title>
-  <meta
-    name="description"
-    content={
-      isHindi
-        ? 'Mahi Technocrafts द्वारा पेश की जाने वाली साइबर कंसल्टेंसी सेवाओं की जानकारी प्राप्त करें। हमारी सेवाओं में साइबर सुरक्षा, हैक रिकवरी, डेटा गोपनीयता, और अधिक शामिल हैं। सुरक्षित और कुशल समाधान के लिए हमसे संपर्क करें।'
-        : 'Learn about the comprehensive cyber consultancy services offered by Mahi Technocrafts. Our services include cybersecurity, hack recovery, data privacy, and more. Contact us for secure and efficient solutions.'
-    }
-  />
-  <meta
-    name="keywords"
-    content={
-      isHindi
-        ? 'साइबर कंसल्टेंसी, साइबर सुरक्षा, डेटा गोपनीयता, हैक रिकवरी, Mahi Technocrafts, साइबर सेवाएं'
-        : 'cyber consultancy, cybersecurity, data privacy, hack recovery, Mahi Technocrafts, cyber services'
-    }
-  />
-  <meta
-    name="robots"
-    content="index, follow"
-  />
-  <meta
-    property="og:title"
-    content={
-      isHindi
-        ? 'साइबर कंसल्टेंसी सेवाएं | Mahi Technocrafts'
-        : 'Cyber Consultancy Services | Mahi Technocrafts'
-    }
-  />
-  <meta
-    property="og:description"
-    content={
-      isHindi
-        ? 'Mahi Technocrafts द्वारा पेश की जाने वाली साइबर कंसल्टेंसी सेवाओं की जानकारी प्राप्त करें। हमारी सेवाओं में साइबर सुरक्षा, हैक रिकवरी, डेटा गोपनीयता, और अधिक शामिल हैं। सुरक्षित और कुशल समाधान के लिए हमसे संपर्क करें।'
-        : 'Learn about the comprehensive cyber consultancy services offered by Mahi Technocrafts. Our services include cybersecurity, hack recovery, data privacy, and more. Contact us for secure and efficient solutions.'
-    }
-  />
-
-  <meta
-    property="og:url"
-    content="https://www.mahitechnocrafts.in/cyber-security" // Replace with the actual URL of your page
-  />
-</Helmet>
-
+        <Helmet>
+          <title>
+            {isHindi
+              ? 'साइबर कंसल्टेंसी सेवाएं | Mahi Technocrafts | साइबर सुरक्षा और डेटा गोपनीयता'
+              : 'Cyber Consultancy Services | Mahi Technocrafts | Cybersecurity and Data Privacy'}
+          </title>
+          <meta
+            name="description"
+            content={
+              isHindi
+                ? 'Mahi Technocrafts द्वारा पेश की जाने वाली साइबर कंसल्टेंसी सेवाओं की जानकारी प्राप्त करें। हमारी सेवाओं में साइबर सुरक्षा, हैक रिकवरी, डेटा गोपनीयता, और अधिक शामिल हैं। सुरक्षित और कुशल समाधान के लिए हमसे संपर्क करें।'
+                : 'Learn about the comprehensive cyber consultancy services offered by Mahi Technocrafts. Our services include cybersecurity, hack recovery, data privacy, and more. Contact us for secure and efficient solutions.'
+            }
+          />
+          <meta
+            name="keywords"
+            content={
+              isHindi
+                ? 'साइबर कंसल्टेंसी, साइबर सुरक्षा, डेटा गोपनीयता, हैक रिकवरी, Mahi Technocrafts, साइबर सेवाएं'
+                : 'cyber consultancy, cybersecurity, data privacy, hack recovery, Mahi Technocrafts, cyber services'
+            }
+          />
+          <meta
+            name="robots"
+            content="index, follow"
+          />
+          <meta
+            property="og:title"
+            content={
+              isHindi
+                ? 'साइबर कंसल्टेंसी सेवाएं | Mahi Technocrafts'
+                : 'Cyber Consultancy Services | Mahi Technocrafts'
+            }
+          />
+          <meta
+            property="og:description"
+            content={
+              isHindi
+                ? 'Mahi Technocrafts द्वारा पेश की जाने वाली साइबर कंसल्टेंसी सेवाओं की जानकारी प्राप्त करें। हमारी सेवाओं में साइबर सुरक्षा, हैक रिकवरी, डेटा गोपनीयता, और अधिक शामिल हैं। सुरक्षित और कुशल समाधान के लिए हमसे संपर्क करें।'
+                : 'Learn about the comprehensive cyber consultancy services offered by Mahi Technocrafts. Our services include cybersecurity, hack recovery, data privacy, and more. Contact us for secure and efficient solutions.'
+            }
+          />
+          <meta
+            property="og:url"
+            content="https://www.mahitechnocrafts.in/cyber-security" // Replace with the actual URL of your page
+          />
+          <script type="application/ld+json">
+            {`
+              {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "serviceType": "Cyber Consultancy",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Mahi Technocrafts",
+                  "url": "https://www.mahitechnocrafts.in",
+                  "logo": "https://www.mahitechnocrafts.in/logo.png",
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+91-6267144122",
+                    "contactType": "customer service",
+                    "email": "support@mahitechnocrafts.in"
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "name": "Cybersecurity Services",
+                  "priceCurrency": "INR",
+                  "price": "Contact for details",
+                  "description": "Comprehensive cyber consultancy services including cybersecurity, hack recovery, data privacy, and more."
+                },
+                "description": "Expert cyber consultancy services by Mahi Technocrafts, offering solutions for cybersecurity, hack recovery, data privacy, and more."
+              }
+            `}
+          </script>
+        </Helmet>
 
         <motion.div
           className="text-center mb-12"
@@ -141,7 +168,6 @@ const CyberConsultancyPage = () => {
           )}
         </motion.section>
 
-  
         {/* Updated Form Section */}
         <motion.div
           className="bg-white p-8 shadow-lg rounded-lg mx-auto"
@@ -172,13 +198,13 @@ const CyberConsultancyPage = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder={isHindi ? 'अपना पूरा नाम दर्ज करें' : 'Enter your full name'}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
+                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </div>
             </motion.div>
 
-            {/* Contact Input */}
+            {/* Contact Number Input */}
             <motion.div className="flex items-center space-x-3"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -190,13 +216,13 @@ const CyberConsultancyPage = () => {
                   {isHindi ? 'संपर्क नंबर' : 'Contact Number'}
                 </label>
                 <input
-                  type="text"
+                  type="tel"
                   name="contact"
                   id="contact"
                   value={formData.contact}
                   onChange={handleChange}
                   placeholder={isHindi ? 'अपना संपर्क नंबर दर्ज करें' : 'Enter your contact number'}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
+                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -211,15 +237,15 @@ const CyberConsultancyPage = () => {
               <FaRegCommentDots className="text-blue-600 text-2xl" />
               <div className="w-full">
                 <label htmlFor="reason" className="block text-gray-700 font-medium mb-2 text-center">
-                  {isHindi ? 'मामले की वजह' : 'Reason for the Case'}
+                  {isHindi ? 'कारण' : 'Reason for Contact'}
                 </label>
                 <textarea
                   name="reason"
                   id="reason"
                   value={formData.reason}
                   onChange={handleChange}
-                  placeholder={isHindi ? 'मामले की वजह बताएं' : 'Describe the reason for the case'}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
+                  placeholder={isHindi ? 'संपर्क का कारण दर्ज करें' : 'Enter the reason for contact'}
+                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   rows="4"
                   required
                 />
@@ -227,55 +253,20 @@ const CyberConsultancyPage = () => {
             </motion.div>
 
             {/* Submit Button */}
-            <motion.button
-              type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+            <motion.div className="text-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8 }}
             >
-              {isHindi ? 'सबमिट करें' : 'Submit'}
-            </motion.button>
+              <button
+                type="submit"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300"
+              >
+                {isHindi ? 'सबमिट करें' : 'Submit'}
+              </button>
+            </motion.div>
           </form>
         </motion.div>
-
-
-              {/* Contact Section */}
-              <motion.div
-          className="bg-blue-50 p-8 shadow-lg rounded-lg mb-12 mx-auto"
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2 className="text-3xl font-bold text-center mb-6 text-blue-800">
-            {isHindi ? 'हमसे संपर्क करें' : 'Contact Us'}
-          </h2>
-
-          <div className="text-center mb-6">
-            <p className="text-lg font-semibold text-gray-800">
-              {isHindi ? 'हम केवल कानूनी प्रक्रियाओं को संभालते हैं और किसी भी प्रकार के अकाउंट हैकिंग में शामिल नहीं होते हैं।' : 'We handle only legal processes and do not engage in hacking any accounts.'}
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {/* Phone Number */}
-            <div className="flex items-center justify-center space-x-3">
-              <FaPhoneAlt className="text-blue-600 text-2xl" />
-              <a href="tel:+916267144122" className="text-blue-600 hover:underline text-lg">
-                +91 62671 44122
-              </a>
-            </div>
-
-            {/* Email Address */}
-            <div className="flex items-center justify-center space-x-3">
-              <FaEnvelope className="text-blue-600 text-2xl" />
-              <a href="mailto:support@mahitechnocrafts.in" className="text-blue-600 hover:underline text-lg">
-                support@mahitechnocrafts.in
-              </a>
-            </div>
-          </div>
-        </motion.div>
-
       </div>
     </>
   );
