@@ -50,15 +50,55 @@ const CyberConsultancyPage = () => {
       <Navbar />
 
       <div className="mx-auto max-w-2xl p-8">
-        <Helmet>
-          <title>{isHindi ? 'साइबर कंसल्टेंसी सेवाएं | Mahi Technocrafts' : 'Cyber Consultancy Services | Mahi Technocrafts'}</title>
-          <meta
-            name="description"
-            content={isHindi 
-              ? 'साइबर सुरक्षा, हैक रिकवरी, डेटा गोपनीयता और अधिक सेवाओं के लिए हमारी साइबर कंसल्टेंसी की सेवाओं के बारे में जानें। Mahi Technocrafts के साथ सुरक्षित रहें।' 
-              : 'Learn about our cyber consultancy services including cybersecurity, hack recovery, data privacy, and more. Stay secure with Mahi Technocrafts.'}
-          />
-        </Helmet>
+      <Helmet>
+  <title>
+    {isHindi
+      ? 'साइबर कंसल्टेंसी सेवाएं | Mahi Technocrafts | साइबर सुरक्षा और डेटा गोपनीयता'
+      : 'Cyber Consultancy Services | Mahi Technocrafts | Cybersecurity and Data Privacy'}
+  </title>
+  <meta
+    name="description"
+    content={
+      isHindi
+        ? 'Mahi Technocrafts द्वारा पेश की जाने वाली साइबर कंसल्टेंसी सेवाओं की जानकारी प्राप्त करें। हमारी सेवाओं में साइबर सुरक्षा, हैक रिकवरी, डेटा गोपनीयता, और अधिक शामिल हैं। सुरक्षित और कुशल समाधान के लिए हमसे संपर्क करें।'
+        : 'Learn about the comprehensive cyber consultancy services offered by Mahi Technocrafts. Our services include cybersecurity, hack recovery, data privacy, and more. Contact us for secure and efficient solutions.'
+    }
+  />
+  <meta
+    name="keywords"
+    content={
+      isHindi
+        ? 'साइबर कंसल्टेंसी, साइबर सुरक्षा, डेटा गोपनीयता, हैक रिकवरी, Mahi Technocrafts, साइबर सेवाएं'
+        : 'cyber consultancy, cybersecurity, data privacy, hack recovery, Mahi Technocrafts, cyber services'
+    }
+  />
+  <meta
+    name="robots"
+    content="index, follow"
+  />
+  <meta
+    property="og:title"
+    content={
+      isHindi
+        ? 'साइबर कंसल्टेंसी सेवाएं | Mahi Technocrafts'
+        : 'Cyber Consultancy Services | Mahi Technocrafts'
+    }
+  />
+  <meta
+    property="og:description"
+    content={
+      isHindi
+        ? 'Mahi Technocrafts द्वारा पेश की जाने वाली साइबर कंसल्टेंसी सेवाओं की जानकारी प्राप्त करें। हमारी सेवाओं में साइबर सुरक्षा, हैक रिकवरी, डेटा गोपनीयता, और अधिक शामिल हैं। सुरक्षित और कुशल समाधान के लिए हमसे संपर्क करें।'
+        : 'Learn about the comprehensive cyber consultancy services offered by Mahi Technocrafts. Our services include cybersecurity, hack recovery, data privacy, and more. Contact us for secure and efficient solutions.'
+    }
+  />
+
+  <meta
+    property="og:url"
+    content="https://www.mahitechnocrafts.in/cyber-security" // Replace with the actual URL of your page
+  />
+</Helmet>
+
 
         <motion.div
           className="text-center mb-12"
