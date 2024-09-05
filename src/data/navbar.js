@@ -37,4 +37,9 @@ export const navbar = [
     name: "CONTACT",
     path: "#contact",
   },
+  {
+    id: 5,
+    name: "CYBER SECUITY",
+    path: "/cyber-security",
+  },
 ];

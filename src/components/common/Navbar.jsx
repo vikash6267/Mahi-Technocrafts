@@ -18,9 +18,9 @@ function Navbar() {
 
   return (
     <div className="w-full">
+      <NavbarMain />
       <div className="w-full fixed bg-white max-h-[70px]   z-50 ">
       
-      <NavbarMain />
       </div>
 
    
