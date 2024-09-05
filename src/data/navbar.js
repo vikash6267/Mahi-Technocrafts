@@ -3,27 +3,27 @@ export const navbar = [
   {
     id: 1,
     name: "HOME",
-    path: "#",
+    path: "/",
   },
   {
     id: 2,
     name: "PROJECTS",
-    path: "#projects",
+    path: "/#projects",
   },
   {
     id: 3,
     name: "TEAM",
-    path: "#team",
+    path: "/#team",
   },
   {
     id: 4,
     name: "ABOUT US",
-    path: "#about",
+    path: "/#about",
   },
   {
     id: 3,
     name: "SERVICES",
-    path: "#service",
+    path: "/#service",
   },
 
   // {
@@ -35,11 +35,11 @@ export const navbar = [
   {
     id: 5,
     name: "CONTACT",
-    path: "#contact",
+    path: "/#contact",
   },
-  {
-    id: 5,
-    name: "CYBER SECUITY",
-    path: "/cyber-security",
-  },
+  // {
+  //   id: 5,
+  //   name: "CYBER SECUITY",
+  //   path: "/cyber-security",
+  // },
 ];

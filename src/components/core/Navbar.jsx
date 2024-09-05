@@ -4,6 +4,7 @@ import { IoClose } from "react-icons/io5";
 import { navbar } from "../../data/navbar";
 import mainlogo from "../../assests/logo.png"
 import { Link } from 'react-router-dom';
+import { FaLaptopCode } from "react-icons/fa6";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -43,17 +44,30 @@ className=' w-screen bg-gray-300 '>
               <ul className="font- flex font-DM font-semibold   flex-col p-2 md:p-0 mt-4 border md:flex-row  rtl:space-x-reverse md:mt-0 md:border-0">
                 {navbar.map((menu, index) => (
                   <li key={menu.id}>
-                    <Link
-                      to={menu.path}
+                    <a
+                      href={menu.path}
                       className={`scroll px-3 ${
                         activeLink === menu.path ? "active-link" : ""
                       }`}
                       onClick={() => handleLinkClick(menu.path)}
                     >
                       {menu.name}
-                    </Link>
+                    </a>
                   </li>
                 ))}
+                <li>
+             
+                    <Link
+                      to={"/cyber-security"}
+                      className={`scroll py-2 px-4 rounded-xl bg-blue-600 text-red-100 flex  items-center gap-1 ${
+                        activeLink === "/cyber-security" ? "text-black" : ""
+                      }`}
+                      onClick={() => handleLinkClick("cyber-security")}
+                    >
+      <FaLaptopCode />
+      CYBER SECUITY
+                    </Link>
+                </li>
                 <span className="hover-effect"></span>
               </ul>
             </div>
