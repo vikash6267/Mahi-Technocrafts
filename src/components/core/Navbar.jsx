@@ -26,7 +26,7 @@ className=' w-screen bg-gray-300 '>
               <nav className="  lg:w-11/12 mx-auto z-20 overflow-hidden max-h-[70px]">
           <div className=" flex flex-wrap items-center justify-between mx-auto p-4">
             <Link
-              href="#top-section"
+              to="/"
               onClick={() => setIsOpen(false)}
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
@@ -114,6 +114,20 @@ className=' w-screen bg-gray-300 '>
         </a>
       </li>
     ))}
+
+    <li className=' w-full flex justify-center'>
+             
+             <Link
+               to={"/cyber-security"}
+               className={`scroll py-2 px-4 rounded-xl bg-blue-600 text-red-100 flex  items-center gap-1 justify-center ${
+                 activeLink === "/cyber-security" ? "text-black" : ""
+               }`}
+               onClick={() => handleLinkClick("cyber-security")}
+             >
+<FaLaptopCode />
+CYBER SECUITY
+             </Link>
+         </li>
   </ul>
 </div>
     </div>
