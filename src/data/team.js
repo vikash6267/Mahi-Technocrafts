@@ -17,16 +17,16 @@ export const team = [
 
     
     },
-    {
-        id:2,
-        name:"Ayush Maheshwari",
-        desc : "Full Stack Web Developer",
-         image:ayush,
-         link :"#",
-        exprience :" 2+ Year"
+    // {
+    //     id:2,
+    //     name:"Ayush Maheshwari",
+    //     desc : "Full Stack Web Developer",
+    //      image:ayush,
+    //      link :"#",
+    //     exprience :" 2+ Year"
 
 
-    },
+    // },
     {
         id:3,
         name:"Rishi Maheshwari",

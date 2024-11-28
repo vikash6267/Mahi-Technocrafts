@@ -1,11 +1,14 @@
-import React, { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from "@gsap/react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 function Loader() {
   const container = useRef();
 
-  useGSAP(() => {
+  useEffect(() => {
+    // Disable scrolling when loader is active
+    document.body.style.overflow = "hidden";
+
+    // GSAP animation
     gsap.fromTo(
       ".loading-page",
       { opacity: 1 },
@@ -14,8 +17,12 @@ function Loader() {
         display: "none",
         duration: 1.0,
         delay: 2.0,
-        scaleX: 14, 
+        scaleX: 14,
         scaleY: 8,
+        onComplete: () => {
+          // Enable scrolling after animation completes
+          document.body.style.overflow = "auto";
+        },
       }
     );
 
@@ -30,24 +37,23 @@ function Loader() {
         opacity: 1,
         duration: 2,
         delay: 0.2,
-        
       }
     );
 
     gsap.fromTo(
-        ".logo-name-slogan",
-        {
-          y: 50,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 2,
-          delay: 0.4,
-        }
-      );
-  });
+      ".logo-name-slogan",
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        delay: 0.4,
+      }
+    );
+  }, []);
 
   return (
     <div className=''>

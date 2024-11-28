@@ -150,7 +150,7 @@ background: radial-gradient(circle, rgba(63,228,251,0.6867121848739496) 0%, rgba
 }
 
 .loading-page {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   /* background: linear-gradient(to right, #2c5364, #203a43, #0f2027); */
@@ -166,7 +166,7 @@ background: radial-gradient(circle, rgba(63,228,251,0.6867121848739496) 0%, rgba
   align-items: center;
   justify-content: center;
   color: #191654;
-  z-index: 100;
+  z-index: 10000;
 }
 
 #svg {

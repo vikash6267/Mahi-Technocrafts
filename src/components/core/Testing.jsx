@@ -20,8 +20,8 @@ export default function ProjectTabs() {
   return (
     <>
       {/* Tab Buttons */}
-      <div className="flex justify-center mb-8 space-x-4 overflow-x-auto">
-        {types.map((type, index) => (
+      <div className="flex justify-start items-center space-x-4 overflow-x-auto whitespace-nowrap px-4 pb-4">
+      {types.map((type, index) => (
           <button
             key={index}
             onClick={() => {
