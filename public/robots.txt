@@ -1,6 +1,6 @@
-# Allow all user agents to access everything
+# Allow all user agents to access everything except admin
 User-agent: *
-Disallow:
+Disallow: /admin/
 
 # Sitemap location
 Sitemap: https://www.mahitechnocrafts.in/sitemap.xml
