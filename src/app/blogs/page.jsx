@@ -14,7 +14,7 @@ export const metadata = {
 
 async function getBlogs() {
   try {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.mahitechnocrafts.in";
     const res = await fetch(`${apiUrl}/api/v1/blogs?published=true`, {
       next: { revalidate: 0 },
       cache: "no-store",
