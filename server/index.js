@@ -15,6 +15,8 @@ app.use(express.json());
 // route 
 app.use("/api/v1/user", require("./routes/userRoute"));
 app.use("/api/v1/reach", require("./routes/Contact"));
+app.use("/api/v1/blogs", require("./routes/blogRoute"));
+app.use("/api/v1/uploads", require("./routes/uploadRoute"));
 
 // Testing the server
 app.get("/", (req, res) => {

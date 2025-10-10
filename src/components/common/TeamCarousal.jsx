@@ -1,76 +1,70 @@
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, Autoplay  } from 'swiper/modules';
-import { Virtual } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+"use client";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  Autoplay,
+  Virtual,
+} from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/virtual';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/virtual";
 
+import Image from "next/image";
+import { team } from "@/data/team";
 
-import { team } from '../../data/team';
-export default () => {
+const TeamSlider = () => {
   return (
     <Swiper
-    modules={[Navigation, Pagination, Scrollbar, Autoplay, Virtual]}
-    spaceBetween={50}
-    navigation
-    pagination={{ clickable: true }}
-    loop={true}
-    className='z-0'
-    autoplay={{ delay: 2000  , pauseOnMouseEnter : false , disableOnInteraction : true}}
-    breakpoints={{
-      // When screen width is less than or equal to 640px
-      640: {
-        slidesPerView: 1,
-      },
-      // When screen width is between 641px and 768px
-      768: {
-        slidesPerView: 2,
-      },
-      // When screen width is greater than 768px
-      1024: {
-        slidesPerView: 3,
-      },
-    }}
-  >
-    {/* Slides content */}
-  
-  
-     
-     <div className='  flex items-center justify-center z-0   '>
-{
-    team.map((pro)=>(
-    <SwiperSlide className='  text-center font-Raleway flex flex-col justify-center items-center  p-10 rounded-xl shadow-2xl ' key={pro.id}> 
-   <div className=' flex justify-center items-center '  >
-  <a href="https://www.instagram.com/mahi_technocrafts" target='_blank' rel="noreferrer"> <img 
-    className=' max-h-[300px] min-h-[200px] border border-black ' style={{ borderRadius: '90%' }}
-    src={pro.image}  alt="" /></a>
-   </div>
-
-    <div className=' pt-3 flex flex-col gap-1'>
-      <p className='text text-3xl font-bold'>{pro.name} </p>
-      <p className=' text-sm'> Exprience -{pro.exprience}</p>
-
-      <p className='text-sm'>{pro.desc}</p>
-
-
-  
-    </div>
-    </SwiperSlide>
-  ))
-}
-        </div> 
-
-             
-          
-      
-    
-    
-    
+      modules={[Navigation, Pagination, Scrollbar, Autoplay, Virtual]}
+      spaceBetween={50}
+      navigation
+      pagination={{ clickable: true }}
+      loop={true}
+      className="z-0"
+      autoplay={{
+        delay: 2000,
+        pauseOnMouseEnter: false,
+        disableOnInteraction: true,
+      }}
+      breakpoints={{
+        640: { slidesPerView: 1 }, // When screen width <= 640px
+        768: { slidesPerView: 2 }, // When screen width <= 768px
+        1024: { slidesPerView: 3 }, // When screen width > 768px
+      }}
+    >
+      {/* Render SwiperSlide for each team member */}
+      {team.map((pro) => (
+        <SwiperSlide
+          key={pro.id}
+          className="text-center font-Raleway flex flex-col justify-center items-center p-10 rounded-xl shadow-2xl"
+        >
+          <div className="flex justify-center items-center">
+            <a href={pro?.link} target="_blank" rel="noreferrer">
+              {/* Use Next.js Image for optimized loading */}
+              <Image
+                className="max-h-[300px] min-h-[200px] border border-black rounded-full"
+                src={pro.image}
+                alt={pro.name}
+                width={200}
+                height={200}
+                priority // Optionally prioritize loading
+              />
+            </a>
+          </div>
+          <div className="pt-3 flex flex-col gap-1">
+            <p className="text-3xl font-bold">{pro.name}</p>
+            <p className="text-sm">Experience - {pro.exprience || "N/A"}</p>
+            <p className="text-sm">{pro.desc || "No description available."}</p>
+          </div>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
+
+export default TeamSlider;

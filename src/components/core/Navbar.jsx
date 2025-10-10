@@ -1,130 +1,183 @@
+"use client";
 import React, { useEffect, useState } from "react";
-import { IoReorderThreeSharp } from "react-icons/io5";
-import { IoClose } from "react-icons/io5";
-import { navbar } from "../../data/navbar";
-import mainlogo from "../../assests/logo.png";
-import { Link } from "react-router-dom";
+import { IoReorderThreeSharp, IoClose } from "react-icons/io5";
+import { navbar } from "@/data/navbar";
+import Image from "next/image";
+import Link from "next/link";
 import { FaLaptopCode } from "react-icons/fa6";
+import mainlogo from "@/assests/logo.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState(window.location.pathname);
+  const [activeLink, setActiveLink] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    // Update active link when component mounts
-    setActiveLink(window.location.pathname);
+    if (typeof window !== "undefined") {
+      setActiveLink(window.location.pathname);
+    }
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleLinkClick = (path) => {
     setActiveLink(path);
     setIsOpen(false);
   };
+
+  // Prevent body scroll when sidebar open
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.body.style.overflow = isOpen ? "hidden" : "unset";
+    }
+    return () => {
+      if (typeof document !== "undefined") {
+        document.body.style.overflow = "unset";
+      }
+    };
+  }, [isOpen]);
+
   return (
-    <div className=" w-screen bg-gray-300 ">
-      <nav className="  lg:w-11/12 mx-auto z-20 overflow-hidden max-h-[70px]">
-        <div className=" flex flex-wrap items-center justify-between mx-auto p-4">
+    <header
+      className={`fixed top-0 left-0 w-full z-40 transition-shadow duration-300 
+        ${isScrolled ? "shadow-xl bg-white" : "bg-white shadow-md"}`}
+    >
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[70px] flex items-center">
+        <div className="flex items-center justify-between w-full">
+          {/* Logo */}
           <Link
-            to="/"
-            onClick={() => setIsOpen(false)}
-            className="flex items-center space-x-3 rtl:space-x-reverse"
+            href="/"
+            onClick={() => handleLinkClick("/")}
+            className="flex items-center space-x-2 flex-shrink-0"
           >
-            <img src={mainlogo} alt="logo" className="h-[40px] p-0" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap ">
-              {/* <span className=" font-bold text-blue-500 text-3xl">M</span>ahi{" "}
-                <span className=" font-bold text-blue-500 text-3xl">T</span>echnoCrafts */}
-            </span>
+            <Image
+              src={mainlogo}
+              alt="Mahi Technocrafts Logo"
+              className="h-10 w-auto"
+            />
           </Link>
 
-          <div
-            className="hidden w-full lg:block xl:block  md:w-auto relative"
-            id="navbar-default"
-          >
-            <ul className="font- flex font-DM font-semibold   flex-col p-2 md:p-0 mt-4 border md:flex-row  rtl:space-x-reverse md:mt-0 md:border-0">
-              {navbar.map((menu, index) => (
+          {/* Desktop Menu */}
+          <div className="hidden w-auto lg:block" id="navbar-default">
+            <ul className="flex font-semibold items-center gap-x-6">
+              {navbar.map((menu) => (
                 <li key={menu.id}>
-                  <a
+                  <Link
                     href={menu.path}
-                    className={`scroll px-3 ${
-                      activeLink === menu.path ? "active-link" : ""
+                    className={`block py-2 text-base transition-colors duration-200 ${
+                      activeLink === menu.path
+                        ? "text-blue-600 border-b-2 border-blue-600"
+                        : "text-gray-700 hover:text-blue-600"
                     }`}
                     onClick={() => handleLinkClick(menu.path)}
                   >
                     {menu.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
+
+              {/* Special Button */}
               <li>
                 <Link
-                  to={"/cyber-security"}
-                  className={`scroll py-2 px-4 rounded-xl bg-blue-600 text-red-100 flex  items-center gap-1 ${
-                    activeLink === "/cyber-security" ? "text-black" : ""
+                  href="/cyber-security"
+                  className={`py-2 px-3 rounded-lg bg-red-600 text-white flex items-center gap-1 text-sm font-bold transition-transform duration-200 hover:bg-red-700 hover:scale-[1.02] ${
+                    activeLink === "/cyber-security" ? "bg-red-700" : ""
                   }`}
-                  onClick={() => handleLinkClick("cyber-security")}
+                  onClick={() => handleLinkClick("/cyber-security")}
                 >
-                  <FaLaptopCode />
-                  CYBER SECUITY
+                  <FaLaptopCode className="text-base" />
+                  CYBER SECURITY
                 </Link>
               </li>
-              <span className="hover-effect"></span>
             </ul>
           </div>
 
-          <div className="text-3xl lg:hidden ">
-            {!isOpen ? (
-              <IoReorderThreeSharp
-                onClick={() => setIsOpen(!isOpen)}
-                className="cursor-pointer"
-              />
-            ) : (
-              <IoClose
-                onClick={() => setIsOpen(!isOpen)}
-                className="cursor-pointer"
-              />
-            )}
+          {/* Mobile Toggle */}
+          <div className="text-3xl lg:hidden text-gray-800">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-1 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+              aria-label={isOpen ? "Close Menu" : "Open Menu"}
+            >
+              {!isOpen ? (
+                <IoReorderThreeSharp className="text-4xl" />
+              ) : (
+                <IoClose className="text-4xl" />
+              )}
+            </button>
           </div>
         </div>
       </nav>
-      <div
-        className={`${
-          isOpen ? "h-auto w-full" : "h-0 w-0 "
-        } z-[100] flex justify-start items-center transition-all duration-[0.5s] flex-col overflow-hidden`}
-      >
-        <ul
-          className={`p-2 text-center lg:hidden bg-white ${
-            isOpen ? "opacity-100 duration-[0.5s]" : "opacity-0 "
-          } w-full`}
-        >
-          {navbar.map((menu, index) => (
-            <li className="pt-3" key={menu.id}>
-              <a
-                href={menu.path}
-                onClick={() => handleLinkClick(menu.path)}
-                className={`scroll ${
-                  isOpen ? "" : "opacity-0 pointer-events-none"
-                } transition-opacity ${
-                  activeLink === menu.path ? "active-link" : ""
-                }`}
-              >
-                {menu.name}
-              </a>
-            </li>
-          ))}
 
-          <li className=" w-full flex justify-center">
-            <Link
-              to={"/cyber-security"}
-              className={`scroll py-2 px-4 rounded-xl bg-blue-600 text-red-100 flex  items-center gap-1 justify-center ${
-                activeLink === "/cyber-security" ? "text-black" : ""
-              }`}
-              onClick={() => handleLinkClick("cyber-security")}
-            >
-              <FaLaptopCode />
-              CYBER SECUITY
-            </Link>
-          </li>
-        </ul>
+      {/* ✅ Sidebar (Always white, fixed, with logo & close icon at top) */}
+      <div
+        className={`fixed top-0 right-0 h-screen w-full max-w-xs z-50 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out lg:hidden 
+        ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        {/* Sidebar Header with Logo & Close Icon */}
+        <div className="flex items-center justify-between px-6 py-4 border-b">
+          <Link
+            href="/"
+            onClick={() => handleLinkClick("/")}
+            className="flex items-center space-x-2"
+          >
+            <Image src={mainlogo} alt="Logo" className="h-8 w-auto" />
+          </Link>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-3xl text-gray-800 hover:text-red-600 transition"
+          >
+            <IoClose />
+          </button>
+        </div>
+
+        {/* Sidebar Content */}
+        <div className="px-8 py-6 overflow-y-auto h-[calc(100vh-70px)]">
+          <ul className="flex flex-col items-start space-y-2">
+            {navbar.map((menu) => (
+              <li className="w-full" key={menu.id}>
+                <Link
+                  href={menu.path}
+                  className={`block w-full py-3 text-lg font-medium rounded-lg transition-colors duration-200 text-left px-4 ${
+                    activeLink === menu.path
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-700 hover:bg-gray-100"
+                  }`}
+                  onClick={() => handleLinkClick(menu.path)}
+                >
+                  {menu.name}
+                </Link>
+              </li>
+            ))}
+
+            {/* Special Mobile Button */}
+            <li className="w-full pt-4">
+              <Link
+                href="/cyber-security"
+                className="w-full block py-3 rounded-lg bg-red-600 text-white flex items-center gap-2 justify-center transition-colors duration-200 hover:bg-red-700"
+                onClick={() => handleLinkClick("/cyber-security")}
+              >
+                <FaLaptopCode className="text-xl" />
+                <span className="font-bold">CYBER SECURITY</span>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+
+      {/* ✅ Transparent Overlay (no white background) */}
+      {isOpen && (
+        <div
+          onClick={() => setIsOpen(false)}
+          className="fixed inset-0 bg-black/20 z-40 transition-opacity duration-300 lg:hidden"
+        ></div>
+      )}
+    </header>
   );
 }
 

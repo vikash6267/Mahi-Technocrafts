@@ -87,8 +87,14 @@ exports.contactUsEmail = (
               <p>Message: ${message}</p>
               <p>We appreciate your interest and will get back to you shortly. </p>
           </div>
-          <div class="support">If you have any further questions or need immediate assistance, please feel free to reach
-              out to us at <a href="mailto:mahitechnocrats@gmail.com">mahitechnocrats@gmail.com</a>. We are here to help!</div>
+<div class="support">
+  If you have any further questions or need immediate assistance, please feel free to reach out to us at 
+  <a href="mailto:support@mahitechnocrafts.in">support@mahitechnocrafts.in</a> 
+  or call us at 
+  <a href="tel:6267144122">6267144122</a>. 
+  We are here to help!
+</div>
+
       </div>
   </body>
   

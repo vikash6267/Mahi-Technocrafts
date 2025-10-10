@@ -1,5 +1,5 @@
 export const navbar = [
- 
+
   {
     id: 1,
     name: "HOME",
@@ -8,34 +8,36 @@ export const navbar = [
   {
     id: 2,
     name: "PROJECTS",
-    path: "/#projects",
+    path: "/projects",
   },
-  {
-    id: 3,
-    name: "TEAM",
-    path: "/#team",
-  },
+  
   {
     id: 4,
     name: "ABOUT US",
-    path: "/#about",
+    path: "/about",
   },
   {
-    id: 3,
+    id: 5,
     name: "SERVICES",
-    path: "/#service",
+    path: "/service",
   },
+  
 
   // {
   //   id: 4,
   //   name: "TESTOMONALS",
-  //   path: "#testimonials",
+  //   path: "testimonials",
   // },
 
   {
-    id: 5,
+    id: 7,
     name: "CONTACT",
-    path: "/#contact",
+    path: "/contact",
+  },
+  {
+    id: 8,
+    name: "BLOGS",
+    path: "/blogs",
   },
   // {
   //   id: 5,

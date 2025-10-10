@@ -1,21 +1,21 @@
 import vikku from "../assests/team/vikku.png"
 import dheeraj from "../assests/team/dheeraj.png"
 import tarun from "../assests/team/tirun1080.png"
-import ayush from "../assests/team/aayush1080.png"
+// import ayush from "../assests/team/aayush1080.png"
 import rishi from "../assests/team/rishi1080.png"
-import harsh from "../assests/team/harsh.png"
-import shreyas from "../assests/team/shreyash.png"
+// import harsh from "../assests/team/harsh.png"
+// import shreyas from "../assests/team/shreyash.png"
 
 export const team = [
     {
-        id:1,
-        name:"Vikash Maheshwari",
-        desc : "Full Stack Web Developer ",
-        image:vikku,
-        link :"https://www.linkedin.com/in/vikash-maheshwari-1191a9277/",
-        exprience :" 2+ Year"
+        id: 1,
+        name: "Vikash Maheshwari",
+        desc: "Full Stack Web Developer ",
+        image: vikku,
+        link: "https://www.linkedin.com/in/vikash-maheshwari-1191a9277/",
+        exprience: " 2+ Year"
 
-    
+
     },
     // {
     //     id:2,
@@ -28,22 +28,22 @@ export const team = [
 
     // },
     {
-        id:3,
-        name:"Rishi Maheshwari",
-        desc : "Full Stack Web Developer",
-       image:rishi,
-       link :"#",
-       exprience :" 2+ Year"
+        id: 3,
+        name: "Rishi Maheshwari",
+        desc: "Full Stack Web Developer",
+        image: rishi,
+        link: "https://www.linkedin.com/in/rishi-maheshwari-005343247",
+        exprience: " 2+ Year"
 
     },
 
     {
-        id:4,
-        name:"Tarun Namdev",
-        desc : "Project Consultant  ",
-        image:tarun,
-        link :"https://www.linkedin.com/in/tarun-namdev-4b5246218/",
-        exprience :" 3+ Year"
+        id: 4,
+        name: "Tarun Namdev",
+        desc: "Project Consultant  ",
+        image: tarun,
+        link: "https://www.linkedin.com/in/tarun-namdev-4b5246218/",
+        exprience: " 3+ Year"
     },
 
     // {
@@ -64,13 +64,13 @@ export const team = [
     // },
 
     {
-        id:7,
-        name:"Dheeraj Singh",
-        desc : "Frontend Developer",
-        image:dheeraj,
-        link :"https://www.linkedin.com/in/tarun-namdev-4b5246218/",
-        exprience :" 6+ Month"
+        id: 7,
+        name: "Dheeraj Singh",
+        desc: "Frontend Developer",
+        image: dheeraj,
+        link: "https://www.linkedin.com/in/tarun-namdev-4b5246218/",
+        exprience: " 6+ Month"
     },
 
-   
+
 ]

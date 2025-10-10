@@ -1,5 +1,4 @@
 import React from "react";
-import { team } from "../../data/team";
 import TeamCarousal from "./TeamCarousal";
 
 function Team() {
