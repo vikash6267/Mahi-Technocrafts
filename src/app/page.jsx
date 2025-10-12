@@ -45,8 +45,7 @@ export async function generateMetadata() {
       description: `Mahi Technocrafts offers end-to-end software development services, including web and mobile applications, API development, and UI/UX design.`,
       images: [
         {
-          image: "https://i.ibb.co/TKZM1Q2/mainlogo.png",
-
+          url: "https://i.ibb.co/TKZM1Q2/mainlogo.png",
           alt: "Mahi Technocrafts Logo",
         },
       ],

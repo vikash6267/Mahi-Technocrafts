@@ -7,6 +7,12 @@ import Link from 'next/link';
 const DUMMY_EMAIL = "support@mahitechnocrafts.in";
 const DUMMY_PASSWORD = "Mahi@2025";
 
+export const metadata = {
+  title: "Admin Login - Mahi Technocrafts",
+  robots: "noindex, nofollow",
+  alternates: { canonical: "/login" },
+};
+
 export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

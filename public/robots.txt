@@ -3,4 +3,4 @@ User-agent: *
 Disallow: /admin/
 
 # Sitemap location
-Sitemap: https://www.mahitechnocrafts.in/sitemap.xml
+Sitemap: https://mahitechnocrafts.in/sitemap.xml

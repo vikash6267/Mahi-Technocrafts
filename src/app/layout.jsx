@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Professional website development and internet services in Bhopal. Offering custom web solutions for businesses in Bhopal and across India.",
   keywords:
-    "Bhopal website development, Bhopal web design, internet services in Bhopal, custom web solutions Bhopal, Bhopal digital marketing",
+    "Bhopal website development, Bhopal web design, internet services in Bhopal, custom web solutions Bhopal, Bhopal digital marketing, website development near me, web designer near me Bhopal, IT services near me",
   authors: [{ name: "Mahi Technocrafts", url: "https://mahitechnocrafts.in" }],
   robots: "index, follow",
   alternates: {
@@ -23,12 +23,7 @@ export const metadata = {
     url: "https://mahitechnocrafts.in",
     siteName: "Mahi Technocrafts",
     images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Mahi Technocrafts - Website Development",
-      },
+      { url: "/og-image.png", alt: "Mahi Technocrafts - Website Development" },
     ],
     locale: "en_IN",
     type: "website",
@@ -37,6 +32,20 @@ export const metadata = {
     icon: "/fav.ico",
   },
   manifest: "/manifest.json",
+  twitter: {
+    card: "summary_large_image",
+    title: "Mahi Technocrafts - Website Development Services in Bhopal",
+    description:
+      "Offering expert website development and internet services in Bhopal. Contact us for custom web solutions tailored to your needs.",
+    images: ["/og-image.png"],
+    site: "@MahiTechnocrafts",
+  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }) {
@@ -86,12 +95,52 @@ export default function RootLayout({ children }) {
                 "@type": "ContactPoint",
                 telephone: "+91-6267144122",
                 contactType: "customer service",
+                areaServed: "IN",
+                availableLanguage: ["en", "hi"],
               },
               logo: "/logo.png",
-              image: "/og-image.png",
+              image: "/linkedin-image.png",
               sameAs: [
                 "https://www.linkedin.com/company/mahi-technocrafts",
                 "https://www.instagram.com/mahi_technocrafts",
+              ],
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 23.2599,
+                longitude: 77.4126,
+              },
+              areaServed: {
+                "@type": "GeoCircle",
+                geoMidpoint: {
+                  "@type": "GeoCoordinates",
+                  latitude: 23.2599,
+                  longitude: 77.4126,
+                },
+                geoRadius: 50000,
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  opens: "10:00",
+                  closes: "19:00",
+                },
+              ],
+              priceRange: "₹₹",
+              hasMap: "https://www.google.com/maps?q=Bhopal,+Madhya+Pradesh",
+              knowsAbout: [
+                "website development",
+                "web design",
+                "SEO",
+                "digital marketing",
+                "IT services",
               ],
             }),
           }}
